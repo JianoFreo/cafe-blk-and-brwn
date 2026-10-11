@@ -2,144 +2,243 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Staff Access | Café BLK &amp; BRWN</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Staff | Café BLK &amp; BRWN</title>
+    <meta
+      name="description"
+      content="Staff demo dashboard for Café BLK &amp; BRWN."
+    />
+    <meta name="theme-color" content="#0b0806" />
+    <meta property="og:title" content="Staff | Café BLK &amp; BRWN" />
+    <meta
+      property="og:description"
+      content="Staff demo dashboard for Café BLK &amp; BRWN."
+    />
+    <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+
+      setTimeout(function () {
+        if (!document.documentElement.classList.contains("motion-ready")) {
+          document.documentElement.classList.add("no-motion");
+          document.documentElement.classList.remove("is-loading");
+        }
+      }, 4500);
+    </script>
   </head>
   <body>
-    <header class="header">
-      <div class="container header-box">
-        <a class="brand" href="index.html"
-          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN — Staff</a
-        >
-        <span class="badge">Staff Area</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><i></i></div>
+    <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="page-curtain" aria-hidden="true">
+      <div class="page-curtain__logo">
+        <img src="assets/logo.jpg" alt="" />
+        <p>BLK &amp; BRWN</p>
       </div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
+        <img src="assets/logo.jpg" alt="" width="48" height="48" />
+        <span>
+          <span class="brand__name">BLK &amp; BRWN</span>
+          <span class="brand__tag">COFFEE · COMMUNITY · COMFORT</span>
+        </span>
+      </a>
+      <nav class="site-nav" id="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-cta">
+            <a class="btn btn--primary btn--sm" href="reserve.html"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-calendar"></use>
+              </svg>
+              Reserve a table</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
+        ><svg class="icon" aria-hidden="true">
+          <use href="#i-calendar"></use>
+        </svg>
+        Reserve a table</a
+      >
+      <button
+        class="nav-toggle"
+        type="button"
+        onclick="toggleMenu()"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Menu"
+      >
+        <span class="nav-toggle__bars"><i></i><i></i></span>
+      </button>
     </header>
-    <main>
+
+    <main id="main">
       <div class="container">
         <section id="login" class="login-box">
-          <form class="form-box" id="login-form">
-            <h1 class="center" style="font-size: 30px">Staff login</h1>
-            <p class="small center">
-              For Café BLK &amp; BRWN staff and branch admins only.
-            </p>
-            <label for="semail">Branch email</label
-            ><input type="email" id="semail" required />
-            <label for="spassword">Password</label
-            ><input type="password" id="spassword" required />
-            <p class="error" id="login-error"></p>
-            <div class="buttons">
-              <button class="btn btn-primary" type="submit" style="width: 100%">
-                Enter Dashboard
+          <form class="glass form-box" id="login-form" data-reveal="flip">
+            <div class="form">
+              <div class="stack center">
+                <span class="icon-badge" style="margin-inline: auto"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-lock"></use></svg
+                ></span>
+                <h1>Staff login</h1>
+                <p class="small">
+                  For Café BLK &amp; BRWN staff and branch admins only.
+                </p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="semail">Branch email</label
+                ><input class="input" type="email" id="semail" required />
+              </div>
+              <div class="field">
+                <label class="field__label" for="spassword">Password</label
+                ><input class="input" type="password" id="spassword" required />
+              </div>
+              <p class="error" id="login-error"></p>
+              <button class="btn btn--primary btn--block btn--lg" type="submit">
+                Enter dashboard
               </button>
+              <p class="small center" style="margin-inline: auto">
+                Demo login: staff@cafeblkbrwn.com / brwn2026
+              </p>
             </div>
-            <p class="small center" style="margin-top: 14px">
-              Demo login: staff@cafeblkbrwn.com / brwn2026
-            </p>
           </form>
         </section>
-
         <section id="dashboard" class="section hidden">
-          <h1>Reservations &amp; Inquiries</h1>
+          <h1>Reservations &amp; <span class="accent">Inquiries</span></h1>
           <div class="tabs">
-            <button class="tab on" onclick="showTable(this, 'reservations')">
+            <span class="tabs__glide"></span>
+            <button
+              class="tab on"
+              type="button"
+              onclick="showTable(this, 'reservations')"
+            >
               Reservations
             </button>
-            <button class="tab" onclick="showTable(this, 'inquiries')">
+            <button
+              class="tab"
+              type="button"
+              onclick="showTable(this, 'inquiries')"
+            >
               Contact Inquiries
             </button>
-            <button class="tab" onclick="logout()">Log out</button>
+            <button class="tab" type="button" onclick="logout()">
+              Log out
+            </button>
           </div>
           <div class="stats">
-            <div class="stat"><b id="count-pending">3</b>Pending</div>
-            <div class="stat"><b id="count-confirmed">2</b>Confirmed</div>
-            <div class="stat"><b>2</b>New inquiries</div>
+            <div class="stat glass"><b id="count-pending">3</b>Pending</div>
+            <div class="stat glass"><b id="count-confirmed">2</b>Confirmed</div>
+            <div class="stat glass"><b>2</b>New inquiries</div>
           </div>
-          <div class="table-box" id="reservations">
+          <div class="table-box glass" id="reservations">
             <table>
-              <tr>
-                <th>Guest</th>
-                <th>Branch</th>
-                <th>Date &amp; time</th>
-                <th>Guests</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-              <tr>
-                <td>Maria Santos</td>
-                <td>Trece Martires</td>
-                <td>Sept 22, 6:00 PM</td>
-                <td>4</td>
-                <td><span class="pill pending">Pending</span></td>
-                <td>
-                  <button class="link-button" onclick="confirmBooking(this)">
-                    Mark Confirmed
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Jake Lorenzo</td>
-                <td>SM City Tanza</td>
-                <td>Sept 22, 7:30 PM</td>
-                <td>2</td>
-                <td><span class="pill confirmed">Confirmed</span></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>Ana Dela Cruz</td>
-                <td>Kawit</td>
-                <td>Sept 23, 5:00 PM</td>
-                <td>6</td>
-                <td><span class="pill pending">Pending</span></td>
-                <td>
-                  <button class="link-button" onclick="confirmBooking(this)">
-                    Mark Confirmed
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Paolo Reyes</td>
-                <td>Naic</td>
-                <td>Sept 23, 6:30 PM</td>
-                <td>3</td>
-                <td><span class="pill confirmed">Confirmed</span></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>Grace Villanueva</td>
-                <td>General Trias</td>
-                <td>Sept 24, 4:00 PM</td>
-                <td>5</td>
-                <td><span class="pill pending">Pending</span></td>
-                <td>
-                  <button class="link-button" onclick="confirmBooking(this)">
-                    Mark Confirmed
-                  </button>
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Guest</th>
+                  <th>Branch</th>
+                  <th>Date &amp; time</th>
+                  <th>Guests</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maria Santos</td>
+                  <td>Trece Martires</td>
+                  <td>Sept 22, 6:00 PM</td>
+                  <td>4</td>
+                  <td><span class="pill pending">Pending</span></td>
+                  <td>
+                    <button class="link-button" onclick="confirmBooking(this)">
+                      Mark Confirmed
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Jake Lorenzo</td>
+                  <td>SM City Tanza</td>
+                  <td>Sept 22, 7:30 PM</td>
+                  <td>2</td>
+                  <td><span class="pill confirmed">Confirmed</span></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Ana Dela Cruz</td>
+                  <td>Kawit</td>
+                  <td>Sept 23, 5:00 PM</td>
+                  <td>6</td>
+                  <td><span class="pill pending">Pending</span></td>
+                  <td>
+                    <button class="link-button" onclick="confirmBooking(this)">
+                      Mark Confirmed
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Paolo Reyes</td>
+                  <td>Naic</td>
+                  <td>Sept 23, 6:30 PM</td>
+                  <td>3</td>
+                  <td><span class="pill confirmed">Confirmed</span></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Grace Villanueva</td>
+                  <td>General Trias</td>
+                  <td>Sept 24, 4:00 PM</td>
+                  <td>5</td>
+                  <td><span class="pill pending">Pending</span></td>
+                  <td>
+                    <button class="link-button" onclick="confirmBooking(this)">
+                      Mark Confirmed
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
-          <div class="table-box hidden" id="inquiries">
+          <div class="table-box glass hidden" id="inquiries">
             <table>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Topic</th>
-                <th>Message</th>
-              </tr>
-              <tr>
-                <td>Lia Cruz</td>
-                <td>lia@example.com</td>
-                <td>Branch inquiry</td>
-                <td>What time does the Kawit branch open?</td>
-              </tr>
-              <tr>
-                <td>Mark Tan</td>
-                <td>mark@example.com</td>
-                <td>Feedback</td>
-                <td>Loved the Lychee juice!</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Topic</th>
+                  <th>Message</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lia Cruz</td>
+                  <td>lia@example.com</td>
+                  <td>Branch inquiry</td>
+                  <td>What time does the Kawit branch open?</td>
+                </tr>
+                <tr>
+                  <td>Mark Tan</td>
+                  <td>mark@example.com</td>
+                  <td>Feedback</td>
+                  <td>Loved the Lychee juice!</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <p class="notice small" style="margin-top: 20px">
@@ -149,6 +248,89 @@
         </section>
       </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="stack">
+            <p class="eyebrow">Café BLK &amp; BRWN</p>
+            <h2>Slow down. <span class="accent">Sip better.</span></h2>
+            <p>Warm cups. Good food. Familiar places.</p>
+          </div>
+          <nav aria-label="Explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="menu.html">Menu and prices</a></li>
+              <li><a href="branches.html">Branches and hours</a></li>
+              <li><a href="reserve.html">Reserve a table</a></li>
+              <li><a href="track.html">Reservation status</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h3>Let’s connect</h3>
+            <ul>
+              <li>
+                <a href="tel:+639270073822"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-phone"></use>
+                  </svg>
+                  +63 927 007 3822</a
+                >
+              </li>
+              <li>
+                <a href="mailto:cafeblkandbrwn@gmail.com"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  cafeblkandbrwn@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/cafeblkandbrwn"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-facebook"></use>
+                  </svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/cafeblkandbrwn/"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-instagram"></use>
+                  </svg>
+                  Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-mark" data-split aria-hidden="true">
+          BLK &amp; BRWN
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
+            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
+            312 Web Development project.
+          </p>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="staff.html">Staff access</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/icons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/scenes.js"></script>
     <script src="js/staff.js"></script>
   </body>
 </html>

@@ -9,6 +9,8 @@ loginForm.addEventListener("submit", (event) => {
   if (email === "staff@cafeblkbrwn.com" && password === "brwn2026") {
     document.getElementById("login").classList.add("hidden");
     document.getElementById("dashboard").classList.remove("hidden");
+    glideAll();
+    document.querySelectorAll("#dashboard .stat b").forEach((b) => { b.style.animation = "pop-in 0.7s var(--ease-spring)"; });
   } else {
     document.getElementById("login-error").textContent = "Email or password is incorrect.";
   }
@@ -21,9 +23,11 @@ function logout() {
 
 // switch between the two tables
 function showTable(button, id) {
-  document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
+  const tabs = button.closest(".tabs");
+  tabs.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
   document.querySelectorAll(".table-box").forEach((box) => box.classList.add("hidden"));
   button.classList.add("on");
+  glideTabs(tabs);
   document.getElementById(id).classList.remove("hidden");
 }
 

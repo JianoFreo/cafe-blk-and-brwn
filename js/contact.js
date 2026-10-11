@@ -13,10 +13,13 @@ form.addEventListener("submit", (event) => {
   const emailOk = email.value.includes("@") && email.value.includes(".");
   const messageOk = message.value.trim() !== "";
 
-  name.classList.toggle("is-invalid", !nameOk);
-  email.classList.toggle("is-invalid", !emailOk);
-  message.classList.toggle("is-invalid", !messageOk);
+  [[name, nameOk], [email, emailOk], [message, messageOk]].forEach(([field, ok]) => {
+    field.classList.remove("is-invalid");
+    if (!ok) { void field.offsetWidth; field.classList.add("is-invalid"); }
+  });
 
+  status.className = "form__status";
+  void status.offsetWidth;
   if (nameOk && emailOk && messageOk) {
     form.reset();
     status.textContent = "Thank you! Your message has been sent.";

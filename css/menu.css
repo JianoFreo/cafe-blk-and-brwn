@@ -1,8 +1,11 @@
-/* Menu page: only the chosen category is shown */
-.menu-group {
-    display: none;
-}
+/* MENU PAGE: one category at a time, with a header line per category ------- */
+.menu-group { display: none; }
+.menu-group.show { display: block; }
+html:not(.js) .menu-group { display: block; margin-bottom: var(--space-8); }
 
-.menu-group.show {
-    display: grid;
-}
+.menu-group .section-head { margin-bottom: var(--space-5); align-items: baseline; }
+.menu-group .section-head h2 { font-size: var(--step-4); }
+.price-from { font-size: 0.9375rem; font-weight: 600; color: var(--latte); white-space: nowrap; }
+.menu-tabs-wrap { position: sticky; top: calc(var(--header-h) + var(--space-2)); z-index: 40; display: flex; justify-content: center; margin-top: var(--space-5); pointer-events: none; }
+.menu-tabs-wrap .tabs { margin: 0; pointer-events: auto; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); }
+.menu-footnote { padding-top: var(--space-7); }

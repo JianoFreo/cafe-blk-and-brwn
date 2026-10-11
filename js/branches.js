@@ -1,33 +1,33 @@
-// Branches page: search box, region buttons and the map
+// Branches page: search box, region buttons, the map, and cards that re-deal when you filter
 let region = "All";
 
 function setRegion(button, name) {
   region = name;
-  document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
+  const tabs = button.closest(".tabs");
+  tabs.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
   button.classList.add("on");
+  glideTabs(tabs);
   filterBranches();
 }
 
 function filterBranches() {
   const text = document.getElementById("search").value.toLowerCase();
-  let shown = 0;
+  const shown = [];
 
-  document.querySelectorAll(".branch-card").forEach((card) => {
+  document.querySelectorAll(".branch-grid > li").forEach((li) => {
+    const card = li.querySelector(".branch-card");
     // search only the branch name and area (not the button labels)
-    const name = card.querySelector("h3").textContent;
-    const area = card.querySelector(".small").textContent;
+    const name = card.querySelector("h2").textContent;
+    const area = card.querySelector(".branch-card__place").textContent;
     const textMatch = (name + " " + area).toLowerCase().includes(text);
     const regionMatch = region === "All" || card.dataset.region === region;
-
-    if (textMatch && regionMatch) {
-      card.style.display = "block";
-      shown++;
-    } else {
-      card.style.display = "none";
-    }
+    li.hidden = !(textMatch && regionMatch);
+    if (!li.hidden) shown.push(li);
   });
 
-  document.getElementById("count").textContent = "Showing " + shown + " of 7 branches";
+  document.getElementById("count").textContent = "Showing " + shown.length + " of 7 branches";
+  document.getElementById("empty").hidden = shown.length > 0;
+  if (window.BB && !BB.reduce) BB.replay(shown, 70);
 }
 
 // ===== MAP (Leaflet + OpenStreetMap: free, no API key) =====
@@ -98,12 +98,13 @@ if (typeof L === "undefined") {
 
 // Add a "Show on map" button to every branch card
 document.querySelectorAll(".branch-card").forEach((card) => {
-  const name = card.querySelector("h3").textContent;
+  const name = card.dataset.name;
 
   const button = document.createElement("button");
-  button.className = "btn btn-dark";
-  button.textContent = "Show on map";
+  button.className = "btn btn--secondary btn--sm";
+  button.type = "button";
+  button.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> Show on map';
   button.addEventListener("click", () => showOnMap(name));
 
-  card.querySelector(".buttons").appendChild(button);
+  card.querySelector(".branch-card__actions").insertBefore(button, card.querySelector(".text-link"));
 });
