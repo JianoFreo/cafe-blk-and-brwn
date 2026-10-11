@@ -1,157 +1,130 @@
-/* Buttons and filter tabs */
-@keyframes buttonHover {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+/* BUTTONS, TABS AND LINKS ---------------------------------------------------
+   One primary action per view: white gradient, dark text, soft glow, and a
+   light sweep that crosses it every few seconds. Secondary is glass. */
 
 .btn {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 50px;
-    border: 2px solid transparent;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    letter-spacing: 0.5px;
-    position: relative;
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--step-0);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.3s ease, background-color 0.25s ease;
 }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(0.97); }
+.btn .icon { transition: transform 0.4s var(--ease-spring); }
+.btn:hover .icon-arrow, .btn:hover .icon--arrow { transform: translateX(5px); }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: left 0.3s ease;
-    z-index: -1;
+.btn--primary { background: var(--cta-gradient); color: var(--black); box-shadow: var(--shadow-cta); }
+.btn--primary:hover { box-shadow: 0 14px 38px rgba(226, 195, 163, 0.45); }
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, rgba(185, 130, 79, 0.45) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: sheen 5s ease-in-out 1.5s infinite;
 }
+@keyframes sheen { 0%, 62% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
 
-.btn:hover::before {
-    left: 100%;
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line-strong);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
+.btn--secondary:hover { background: rgba(255, 255, 255, 0.16); }
 
-.btn-primary {
-    background: linear-gradient(135deg, #a34a19, #c67c3c);
-    color: white;
-    box-shadow: 0 4px 15px rgba(163, 74, 25, 0.3);
+.btn--sm { min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.9375rem; }
+.btn--lg { min-height: 56px; padding: 1rem 2rem; font-size: var(--step-1); }
+.btn--block { width: 100%; }
+.btn--icon { width: 40px; padding-inline: 0; }
+
+.text-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  font-weight: 600;
+  color: var(--latte);
 }
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #8a3c15, #b56d36);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(163, 74, 25, 0.4);
+.text-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-out);
 }
+.text-link:hover { color: var(--white); }
+.text-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.text-link .icon { transition: transform 0.4s var(--ease-spring); }
+.text-link:hover .icon { transform: translateX(5px); }
 
-.btn-primary:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(163, 74, 25, 0.3);
-}
-
-.btn-dark {
-    background: linear-gradient(135deg, #1a1410, #3d2817);
-    color: white;
-    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.2);
-}
-
-.btn-dark:hover {
-    background: linear-gradient(135deg, #0f0b09, #2a1d12);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(26, 20, 16, 0.3);
-}
-
-.btn-dark:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(26, 20, 16, 0.2);
-}
-
-.btn-outline {
-    border-color: #1a1410;
-    color: #1a1410;
-    background: transparent;
-    transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-    background: #1a1410;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(26, 20, 16, 0.2);
-}
-
-.btn-outline:active {
-    transform: translateY(0);
-}
-
-.btn-light {
-    border-color: white;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.btn-light:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-}
-
-.buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 24px;
-}
-
-.tab {
-    padding: 11px 22px;
-    margin: 0 8px 10px 0;
-    border-radius: 50px;
-    border: 2px solid #dcd0c5;
-    background: white;
-    color: #1a1410;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-}
-
-.tab:hover {
-    border-color: #a34a19;
-    background: rgba(163, 74, 25, 0.05);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(163, 74, 25, 0.1);
-}
-
-.tab.on {
-    background: linear-gradient(135deg, #a34a19, #c67c3c);
-    color: white;
-    border-color: #a34a19;
-    box-shadow: 0 4px 12px rgba(163, 74, 25, 0.3);
-}
-
-.tab.on:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(163, 74, 25, 0.4);
-}
-
+/* Filter tabs with a gliding highlight (js/menu.js, js/branches.js, js/gallery.js) */
 .tabs {
-    margin: 24px 0 32px;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  margin: var(--space-5) 0 var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: rgba(20, 13, 9, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
+.tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.tab:hover { color: var(--white); }
+.tab.on { color: var(--black); }
+.tabs__glide {
+  position: absolute;
+  z-index: 0;
+  top: var(--space-2);
+  left: 0;
+  height: 40px;
+  width: var(--gw, 0px);
+  border-radius: var(--radius-pill);
+  background: var(--cta-gradient);
+  box-shadow: 0 6px 20px rgba(226, 195, 163, 0.35);
+  transform: translate3d(var(--gx, 0px), var(--gy, 0px), 0);
+  transition: transform 0.55s var(--ease-out), width 0.55s var(--ease-out);
+  pointer-events: none;
+}
+/* tabs without JS still show which one is active */
+html:not(.js) .tab.on { background: var(--cta-gradient); }
+
+.link-button { background: none; border: 0; color: var(--latte); font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 10px 4px; }
+.link-button:hover { color: var(--white); }

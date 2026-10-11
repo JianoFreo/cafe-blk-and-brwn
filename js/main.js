@@ -1,57 +1,36 @@
-// Shared by every page: phone menu button and the year in the footer
-function toggleMenu() {
+// Shared by every page: phone menu, footer year, and the sliding highlight behind filter tabs.
+
+function toggleMenu(open) {
   const nav = document.getElementById("nav");
-  const button = document.querySelector(".menu-button");
-  const isOpen = nav.classList.toggle("open");
-  button.setAttribute("aria-expanded", isOpen);
+  const button = document.querySelector(".nav-toggle");
+  if (!nav || !button) return;
+  const isOpen = typeof open === "boolean" ? open : !nav.classList.contains("open");
+  nav.classList.toggle("open", isOpen);
+  button.setAttribute("aria-expanded", String(isOpen));
+  const header = document.querySelector(".site-header");
+  if (header) header.classList.toggle("is-menu-open", isOpen);
 }
+
+document.querySelectorAll(".site-nav li").forEach((li, i) => li.style.setProperty("--i", i));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") toggleMenu(false); });
+document.querySelectorAll(".site-nav a").forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
 
 const year = document.getElementById("year");
-if (year) {
-  year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
+
+// Tab highlight: a pill that glides under whichever .tab has the class "on".
+function glideTabs(tabs) {
+  const glide = tabs.querySelector(".tabs__glide");
+  const on = tabs.querySelector(".tab.on");
+  if (!glide || !on || !on.offsetWidth) return;
+  // offset sizes ignore transforms, so this also works while the bar is still animating in
+  glide.style.setProperty("--gx", on.offsetLeft + "px");
+  glide.style.setProperty("--gy", on.offsetTop - 8 + "px");
+  glide.style.setProperty("--gw", on.offsetWidth + "px");
 }
-}
-
-// Smooth scroll animations on load and scroll
-document.addEventListener('DOMContentLoaded', function() {
-  // Add animation classes to elements as they come into view
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Observe all sections and cards
-  document.querySelectorAll('.section, .card, .grid > div').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-  });
-});
-
-// Add parallax scroll effect to hero image
-window.addEventListener('scroll', function() {
-  const heroImg = document.querySelector('.photo-hero');
-  if (heroImg) {
-    const scrollPos = window.scrollY;
-    heroImg.style.transform = `translateY(${scrollPos * 0.3}px)`;
-  }
-});
-
-// Smooth hover effect for links
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('mouseenter', function() {
-    this.style.textShadow = '0 0 10px rgba(163, 74, 25, 0.2)';
-  });
-  link.addEventListener('mouseleave', function() {
-    this.style.textShadow = 'none';
-  });
-});
+function glideAll() { document.querySelectorAll(".tabs").forEach(glideTabs); }
+window.glideTabs = glideTabs;
+window.addEventListener("load", glideAll);
+window.addEventListener("resize", glideAll);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(glideAll);
+glideAll();

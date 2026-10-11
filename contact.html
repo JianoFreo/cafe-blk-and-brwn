@@ -2,136 +2,333 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Contact | Café BLK &amp; BRWN</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="description"
+      content="Contact Café BLK &amp; BRWN: phone, email, social pages and an inquiry form."
+    />
+    <meta name="theme-color" content="#0b0806" />
+    <meta property="og:title" content="Contact | Café BLK &amp; BRWN" />
+    <meta
+      property="og:description"
+      content="Contact Café BLK &amp; BRWN: phone, email, social pages and an inquiry form."
+    />
+    <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+
+      setTimeout(function () {
+        if (!document.documentElement.classList.contains("motion-ready")) {
+          document.documentElement.classList.add("no-motion");
+          document.documentElement.classList.remove("is-loading");
+        }
+      }, 4500);
+    </script>
   </head>
   <body>
-    <header class="header">
-      <div class="container header-box">
-        <a class="brand" href="index.html"
-          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN</a
-        >
-        <button
-          class="menu-button"
-          onclick="toggleMenu()"
-          aria-label="Open menu" aria-expanded="false"
-        >
-          &#9776;
-        </button>
-        <nav class="nav" id="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="menu.html">Menu</a>
-          <a href="branches.html">Branches</a>
-          <a href="reserve.html">Reserve</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html" class="active">Contact</a>
-        </nav>
-        <a class="btn btn-outline header-button" href="branches.html"
-          >Find a branch</a
-        >
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><i></i></div>
+    <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="page-curtain" aria-hidden="true">
+      <div class="page-curtain__logo">
+        <img src="assets/logo.jpg" alt="" />
+        <p>BLK &amp; BRWN</p>
       </div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
+        <img src="assets/logo.jpg" alt="" width="48" height="48" />
+        <span>
+          <span class="brand__name">BLK &amp; BRWN</span>
+          <span class="brand__tag">COFFEE · COMMUNITY · COMFORT</span>
+        </span>
+      </a>
+      <nav class="site-nav" id="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li class="nav-cta">
+            <a class="btn btn--primary btn--sm" href="reserve.html"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-calendar"></use>
+              </svg>
+              Reserve a table</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
+        ><svg class="icon" aria-hidden="true">
+          <use href="#i-calendar"></use>
+        </svg>
+        Reserve a table</a
+      >
+      <button
+        class="nav-toggle"
+        type="button"
+        onclick="toggleMenu()"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Menu"
+      >
+        <span class="nav-toggle__bars"><i></i><i></i></span>
+      </button>
     </header>
-    <main>
-      <section class="section">
-        <div class="container">
-          <h1>Get in touch</h1>
-          <p class="lead">Questions, orders, or feedback? Send us a message and we will reply within one to two days.</p>
-          <div class="contact-layout">
-            <div>
-              <div class="card space">
-                <h3>Reach us</h3>
-                <p><b>Phone:</b> +63 927 007 3822</p>
-                <p><b>Email:</b> cafeblkandbrwn@gmail.com</p>
-                <p><b>Base:</b> Tanza, Cavite</p>
-                <p><b>Hours:</b> Coming soon</p>
-                <p>
-                  <a
-                    href="https://web.facebook.com/cafeblkandbrwn"
-                    target="_blank"
-                    >Facebook</a
-                  >
-                  ·
-                  <a
-                    href="https://www.instagram.com/cafeblkandbrwn"
-                    target="_blank"
-                    >Instagram</a
-                  >
-                </p>
-              </div>
-              <div class="card">
-                <h3>Looking for a branch?</h3>
-                <p class="small" style="margin: 8px 0 14px">
-                  Use the Branch Finder for directions and details on all 7
-                  locations.
-                </p>
-                <a class="btn btn-outline" href="branches.html"
-                  >Open Branch Finder</a
-                >
-              </div>
+
+    <main id="main">
+      <header class="container page-intro">
+        <div class="stack">
+          <p class="eyebrow" data-reveal="rise">Let’s connect</p>
+          <h1 data-split>
+            We’re happy to <span class="accent">hear from you.</span>
+          </h1>
+          <p class="lead" data-reveal="rise" style="--d: 350">
+            Questions, orders, or feedback? Send us a message and we will reply
+            within one to two days.
+          </p>
+        </div>
+      </header>
+      <section class="container section--tight">
+        <div class="contact-layout">
+          <div class="stack--lg">
+            <div class="glass card" data-reveal="slide-l" data-tilt>
+              <h2 class="heading-md">Say hello</h2>
+              <ul class="aside-list">
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-phone"></use>
+                  </svg>
+                  <div>
+                    <strong>Call us</strong><br /><a
+                      class="text-link"
+                      href="tel:+639270073822"
+                      >+63 927 007 3822</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  <div>
+                    <strong>Email</strong><br /><a
+                      class="text-link"
+                      href="mailto:cafeblkandbrwn@gmail.com"
+                      >cafeblkandbrwn@gmail.com</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-map-pin"></use>
+                  </svg>
+                  <div>
+                    <strong>Home branch</strong><br />Capipisa, Tanza, Cavite,
+                    Philippines
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-clock"></use>
+                  </svg>
+                  <div>
+                    <strong>Hours</strong><br />Each branch keeps its own hours.
+                    <a class="text-link" href="branches.html"
+                      >See branch hours</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-sparkles"></use>
+                  </svg>
+                  <div>
+                    <strong>Follow us</strong><br /><a
+                      class="text-link"
+                      href="https://web.facebook.com/cafeblkandbrwn"
+                      target="_blank"
+                      rel="noopener"
+                      >Facebook</a
+                    >
+                    ·
+                    <a
+                      class="text-link"
+                      href="https://www.instagram.com/cafeblkandbrwn/"
+                      target="_blank"
+                      rel="noopener"
+                      >Instagram</a
+                    >
+                  </div>
+                </li>
+              </ul>
             </div>
-            <form class="form-box" id="contact-form" novalidate>
-              <label for="cname" style="margin-top: 0">Full name</label
-              ><input type="text" id="cname" required />
-              <label for="cemail">Email address</label
-              ><input type="email" id="cemail" required />
-              <label for="topic">This message is about</label>
-              <select id="topic">
-                <option>General inquiry</option>
-                <option>Branch inquiry</option>
-                <option>Feedback</option>
-              </select>
-              <label for="cmessage">Message</label
-              ><textarea id="cmessage" required></textarea>
-              <div class="buttons">
-                <button class="btn btn-primary" type="submit">
-                  Send Message
-                </button>
-              </div>
-              <p class="small" style="margin-top: 12px">
-                Public contact details only — no personal staff information is
-                shown.
+            <div
+              class="glass card"
+              data-reveal="slide-l"
+              style="--d: 150"
+              data-tilt
+            >
+              <h3>Looking for a branch?</h3>
+              <p class="small">
+                Use the Branch Finder for directions and details on all 7
+                locations.
               </p>
-              <p class="form__status" id="form-status" role="status"></p>
-            </form>
+              <a class="btn btn--secondary" href="branches.html"
+                >Open Branch Finder</a
+              >
+            </div>
           </div>
+          <form
+            class="glass form-box"
+            id="contact-form"
+            novalidate
+            data-reveal="slide-r"
+          >
+            <div class="form">
+              <fieldset class="fieldset">
+                <legend class="fieldset__title">
+                  <span class="icon-badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-send"></use></svg
+                  ></span>
+                  Send an inquiry
+                </legend>
+                <div class="field">
+                  <label class="field__label" for="cname">Full name</label
+                  ><input class="input" type="text" id="cname" required />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="cemail">Email address</label
+                  ><input class="input" type="email" id="cemail" required />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="topic"
+                    >This message is about</label
+                  >
+                  <select class="select" id="topic">
+                    <option>General inquiry</option>
+                    <option>Branch inquiry</option>
+                    <option>Feedback</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="cmessage">Message</label
+                  ><textarea class="textarea" id="cmessage" required></textarea>
+                </div>
+              </fieldset>
+              <div class="form-actions">
+                <button class="btn btn--primary btn--lg" type="submit">
+                  Send message
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-send"></use>
+                  </svg>
+                </button>
+                <p class="muted">
+                  Public contact details only — no personal staff information is
+                  shown.
+                </p>
+              </div>
+              <p class="form__status" id="form-status" role="status"></p>
+            </div>
+          </form>
         </div>
       </section>
     </main>
-    <footer class="footer">
+
+    <footer class="site-footer">
       <div class="container">
-        <div class="footer-box">
-          <div>
-            <h3>Café BLK &amp; BRWN</h3>
-            <p class="small">
-              Slow down. Sip better. A coffee shop and restaurant with branches
-              across Cavite and Metro Manila.
-            </p>
+        <div class="footer-grid">
+          <div class="stack">
+            <p class="eyebrow">Café BLK &amp; BRWN</p>
+            <h2>Slow down. <span class="accent">Sip better.</span></h2>
+            <p>Warm cups. Good food. Familiar places.</p>
           </div>
+          <nav aria-label="Explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="menu.html">Menu and prices</a></li>
+              <li><a href="branches.html">Branches and hours</a></li>
+              <li><a href="reserve.html">Reserve a table</a></li>
+              <li><a href="track.html">Reservation status</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </nav>
           <div>
-            <h3>Quick links</h3>
-            <a href="index.html">Home</a><a href="about.html">About Us</a
-            ><a href="menu.html">Menu</a><a href="branches.html">Branches</a
-            ><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a
-            ><a href="contact.html">Contact</a>
-          </div>
-          <div>
-            <h3>Reach out</h3>
-            <p class="small">
-              +63 927 007 3822<br />cafeblkandbrwn@gmail.com<br />Facebook &amp;
-              Instagram: @cafeblkandbrwn
-            </p>
+            <h3>Let’s connect</h3>
+            <ul>
+              <li>
+                <a href="tel:+639270073822"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-phone"></use>
+                  </svg>
+                  +63 927 007 3822</a
+                >
+              </li>
+              <li>
+                <a href="mailto:cafeblkandbrwn@gmail.com"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  cafeblkandbrwn@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/cafeblkandbrwn"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-facebook"></use>
+                  </svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/cafeblkandbrwn/"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-instagram"></use>
+                  </svg>
+                  Instagram</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <p class="copyright">
-          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One
-          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
-        </p>
+        <div class="footer-mark" data-split aria-hidden="true">
+          BLK &amp; BRWN
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
+            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
+            312 Web Development project.
+          </p>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="staff.html">Staff access</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+    <script src="js/icons.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/motion.js"></script>
+    <script src="js/scenes.js"></script>
     <script src="js/contact.js"></script>
   </body>
 </html>
