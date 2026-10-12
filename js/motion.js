@@ -156,17 +156,27 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
     /* clip / wipe elements are fully clipped before they show, which hides them from
        IntersectionObserver, so they are checked by position instead */
-    var clipped = [];
+    var clipped = [], waiting = [];
     document.querySelectorAll("[data-reveal], [data-split], [data-count], .cup-host").forEach(function (el) {
       var v = el.getAttribute("data-reveal");
-      if (v === "clip" || v === "wipe") clipped.push(el); else io.observe(el);
+      if (v === "clip" || v === "wipe") clipped.push(el); else { io.observe(el); waiting.push(el); }
+    });
+    /* anything the visitor scrolled straight past (End key, reload mid-page) shows itself */
+    var tickN = 0;
+    BB.onFrame(function () {
+      if (!BB.ready || ++tickN % 20) return;
+      for (var i = waiting.length - 1; i >= 0; i--) {
+        var el = waiting[i];
+        if (el.classList.contains("is-in")) { waiting.splice(i, 1); continue; }
+        if (el.getBoundingClientRect().bottom < -40) { io.unobserve(el); waiting.splice(i, 1); show(el); }
+      }
     });
     BB.onFrame(function () {
       if (!clipped.length || !BB.ready) return;
       var vh = window.innerHeight;
       for (var i = clipped.length - 1; i >= 0; i--) {
         var r = clipped[i].getBoundingClientRect();
-        if (r.height && r.top < vh * 0.92 && r.bottom > 0) { show(clipped[i]); clipped.splice(i, 1); }
+        if (r.height && r.top < vh * 0.92) { show(clipped[i]); clipped.splice(i, 1); }
       }
     });
     
@@ -184,6 +194,7 @@
       var menuOpen = header.classList.contains("is-menu-open");
       if (y > 160 && y > lastY && !menuOpen) header.classList.add("is-hidden");
       else header.classList.remove("is-hidden");
+      root.classList.toggle("hdr-hidden", header.classList.contains("is-hidden"));
       lastY = y;
     });
 

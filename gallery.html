@@ -2,27 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Gallery | Café BLK &amp; BRWN</title>
-    <meta
-      name="description"
-      content="A look at the drinks, food, branches and everyday moments at Café BLK &amp; BRWN."
-    />
+    <meta name="description" content="A look at the drinks, food, branches and everyday moments at Café BLK &amp; BRWN." />
     <meta name="theme-color" content="#0b0806" />
     <meta property="og:title" content="Gallery | Café BLK &amp; BRWN" />
-    <meta
-      property="og:description"
-      content="A look at the drinks, food, branches and everyday moments at Café BLK &amp; BRWN."
-    />
+    <meta property="og:description" content="A look at the drinks, food, branches and everyday moments at Café BLK &amp; BRWN." />
     <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/style.css" />
     <script>
       document.documentElement.classList.add("js");
-
+      
       setTimeout(function () {
         if (!document.documentElement.classList.contains("motion-ready")) {
           document.documentElement.classList.add("no-motion");
@@ -36,12 +27,7 @@
     <div class="scroll-progress" aria-hidden="true"><i></i></div>
     <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="grain" aria-hidden="true"></div>
-    <div class="page-curtain" aria-hidden="true">
-      <div class="page-curtain__logo">
-        <img src="assets/logo.jpg" alt="" />
-        <p>BLK &amp; BRWN</p>
-      </div>
-    </div>
+    <div class="page-curtain" aria-hidden="true"><div class="page-curtain__logo"><img src="assets/logo.jpg" alt="" /><p>BLK &amp; BRWN</p></div></div>
 
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
@@ -59,30 +45,11 @@
           <li><a href="branches.html">Branches</a></li>
           <li><a href="gallery.html" aria-current="page">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta">
-            <a class="btn btn--primary btn--sm" href="reserve.html"
-              ><svg class="icon" aria-hidden="true">
-                <use href="#i-calendar"></use>
-              </svg>
-              Reserve a table</a
-            >
-          </li>
+          <li class="nav-cta"><a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a></li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
-        ><svg class="icon" aria-hidden="true">
-          <use href="#i-calendar"></use>
-        </svg>
-        Reserve a table</a
-      >
-      <button
-        class="nav-toggle"
-        type="button"
-        onclick="toggleMenu()"
-        aria-expanded="false"
-        aria-controls="nav"
-        aria-label="Menu"
-      >
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a>
+      <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav" aria-label="Menu">
         <span class="nav-toggle__bars"><i></i><i></i></span>
       </button>
     </header>
@@ -92,598 +59,170 @@
         <div class="stack">
           <p class="eyebrow" data-reveal="rise">Life at BLK &amp; BRWN</p>
           <h1 data-split>Stay a little <span class="accent">longer.</span></h1>
-          <p class="lead" data-reveal="rise" style="--d: 350">
-            A look at our products, branches, and events.
-          </p>
+          <p class="lead" data-reveal="rise" style="--d: 350">A look at our products, branches, and events.</p>
         </div>
       </header>
       <section class="container section--tight">
-        <div
-          class="tabs"
-          role="tablist"
-          aria-label="Gallery filter"
-          data-reveal="pop"
-        >
+        <div class="tabs" role="tablist" aria-label="Gallery filter" data-reveal="rise">
           <span class="tabs__glide"></span>
-          <button
-            class="tab on"
-            type="button"
-            onclick="filterGallery(this, 'all')"
-          >
-            All
-          </button>
-          <button
-            class="tab"
-            type="button"
-            onclick="filterGallery(this, 'moments')"
-          >
-            Café moments
-          </button>
-          <button
-            class="tab"
-            type="button"
-            onclick="filterGallery(this, 'branches')"
-          >
-            Branches
-          </button>
-          <button
-            class="tab"
-            type="button"
-            onclick="filterGallery(this, 'drinks')"
-          >
-            Drinks
-          </button>
-          <button
-            class="tab"
-            type="button"
-            onclick="filterGallery(this, 'food')"
-          >
-            Food
-          </button>
+          <button class="tab on" type="button" onclick="filterGallery(this, 'all')">All</button>
+          <button class="tab" type="button" onclick="filterGallery(this, 'moments')">Café moments</button>
+          <button class="tab" type="button" onclick="filterGallery(this, 'branches')">Branches</button>
+          <button class="tab" type="button" onclick="filterGallery(this, 'drinks')">Drinks</button>
+          <button class="tab" type="button" onclick="filterGallery(this, 'food')">Food</button>
         </div>
         <div class="gallery">
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery1.jpg"
-              data-caption="Café moment 1"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery1.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 1"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery1.jpg" data-caption="Café moment 1">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery1.jpg" alt="Café BLK &amp; BRWN gallery photo 1" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 1</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery2.jpg"
-              data-caption="Café moment 2"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery2.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 2"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery2.jpg" data-caption="Café moment 2">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery2.jpg" alt="Café BLK &amp; BRWN gallery photo 2" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 2</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery3.jpg"
-              data-caption="Café moment 3"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery3.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 3"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery3.jpg" data-caption="Café moment 3">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery3.jpg" alt="Café BLK &amp; BRWN gallery photo 3" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 3</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery4.jpg"
-              data-caption="Café moment 4"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery4.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 4"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery4.jpg" data-caption="Café moment 4">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery4.jpg" alt="Café BLK &amp; BRWN gallery photo 4" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 4</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery5.jpg"
-              data-caption="Café moment 5"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery5.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 5"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery5.jpg" data-caption="Café moment 5">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery5.jpg" alt="Café BLK &amp; BRWN gallery photo 5" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 5</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery6.jpg"
-              data-caption="Café moment 6"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery6.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 6"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery6.jpg" data-caption="Café moment 6">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery6.jpg" alt="Café BLK &amp; BRWN gallery photo 6" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 6</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery7.jpg"
-              data-caption="Café moment 7"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery7.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 7"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery7.jpg" data-caption="Café moment 7">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery7.jpg" alt="Café BLK &amp; BRWN gallery photo 7" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 7</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="moments"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Gallery/gallery8.jpg"
-              data-caption="Café moment 8"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Gallery/gallery8.jpg"
-                  alt="Café BLK &amp; BRWN gallery photo 8"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="moments" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery8.jpg" data-caption="Café moment 8">
+              <span class="gallery__frame"><img src="assets/Gallery/gallery8.jpg" alt="Café BLK &amp; BRWN gallery photo 8" loading="lazy" /></span>
               <span class="gallery__caption">Café moment 8</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/capipisa_tanza.jpg"
-              data-caption="Our Capipisa, Tanza main branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/capipisa_tanza.jpg"
-                  alt="Café BLK &amp; BRWN Capipisa, Tanza main branch"
-                  loading="lazy"
-              /></span>
-              <span class="gallery__caption"
-                >Our Capipisa, Tanza main branch</span
-              >
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/capipisa_tanza.jpg" data-caption="Our Capipisa, Tanza main branch">
+              <span class="gallery__frame"><img src="assets/Branches/capipisa_tanza.jpg" alt="Café BLK &amp; BRWN Capipisa, Tanza main branch" loading="lazy" /></span>
+              <span class="gallery__caption">Our Capipisa, Tanza main branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/naic.jpg"
-              data-caption="Our Naic branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/naic.jpg"
-                  alt="Café BLK &amp; BRWN Naic branch"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/naic.jpg" data-caption="Our Naic branch">
+              <span class="gallery__frame"><img src="assets/Branches/naic.jpg" alt="Café BLK &amp; BRWN Naic branch" loading="lazy" /></span>
               <span class="gallery__caption">Our Naic branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/general_trias.jpg"
-              data-caption="Our General Trias branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/general_trias.jpg"
-                  alt="Café BLK &amp; BRWN General Trias branch"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/general_trias.jpg" data-caption="Our General Trias branch">
+              <span class="gallery__frame"><img src="assets/Branches/general_trias.jpg" alt="Café BLK &amp; BRWN General Trias branch" loading="lazy" /></span>
               <span class="gallery__caption">Our General Trias branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/kawit.jpg"
-              data-caption="Our Kawit branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/kawit.jpg"
-                  alt="Café BLK &amp; BRWN Kawit branch"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/kawit.jpg" data-caption="Our Kawit branch">
+              <span class="gallery__frame"><img src="assets/Branches/kawit.jpg" alt="Café BLK &amp; BRWN Kawit branch" loading="lazy" /></span>
               <span class="gallery__caption">Our Kawit branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/trece_martires.jpg"
-              data-caption="Our Trece Martires branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/trece_martires.jpg"
-                  alt="Café BLK &amp; BRWN Trece Martires branch"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/trece_martires.jpg" data-caption="Our Trece Martires branch">
+              <span class="gallery__frame"><img src="assets/Branches/trece_martires.jpg" alt="Café BLK &amp; BRWN Trece Martires branch" loading="lazy" /></span>
               <span class="gallery__caption">Our Trece Martires branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/sm_city_tanza.jpg"
-              data-caption="Our SM City Tanza branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/sm_city_tanza.jpg"
-                  alt="Café BLK &amp; BRWN SM City Tanza branch"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/sm_city_tanza.jpg" data-caption="Our SM City Tanza branch">
+              <span class="gallery__frame"><img src="assets/Branches/sm_city_tanza.jpg" alt="Café BLK &amp; BRWN SM City Tanza branch" loading="lazy" /></span>
               <span class="gallery__caption">Our SM City Tanza branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="branches"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Branches/festival_mall_alabang.jpg"
-              data-caption="Our Festival Mall Alabang branch"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Branches/festival_mall_alabang.jpg"
-                  alt="Café BLK &amp; BRWN Festival Mall Alabang branch"
-                  loading="lazy"
-              /></span>
-              <span class="gallery__caption"
-                >Our Festival Mall Alabang branch</span
-              >
+          <div class="gallery__item" data-cat="branches" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/festival_mall_alabang.jpg" data-caption="Our Festival Mall Alabang branch">
+              <span class="gallery__frame"><img src="assets/Branches/festival_mall_alabang.jpg" alt="Café BLK &amp; BRWN Festival Mall Alabang branch" loading="lazy" /></span>
+              <span class="gallery__caption">Our Festival Mall Alabang branch</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="drinks"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Freskaro%20Juices/lychee.jpg"
-              data-caption="Lychee Freskaró juice"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Freskaro%20Juices/lychee.jpg"
-                  alt="Lychee Freskaró juice"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="drinks" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Freskaro%20Juices/lychee.jpg" data-caption="Lychee Freskaró juice">
+              <span class="gallery__frame"><img src="assets/Freskaro%20Juices/lychee.jpg" alt="Lychee Freskaró juice" loading="lazy" /></span>
               <span class="gallery__caption">Lychee Freskaró juice</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="drinks"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Kape%20Series/oreo_coffee.jpg"
-              data-caption="Oreo coffee, Kape Series"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Kape%20Series/oreo_coffee.jpg"
-                  alt="Oreo coffee, Kape Series"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="drinks" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Kape%20Series/oreo_coffee.jpg" data-caption="Oreo coffee, Kape Series">
+              <span class="gallery__frame"><img src="assets/Kape%20Series/oreo_coffee.jpg" alt="Oreo coffee, Kape Series" loading="lazy" /></span>
               <span class="gallery__caption">Oreo coffee, Kape Series</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="drinks"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Over%20-%20Ice%20Series/spanish_latte.jpg"
-              data-caption="Iced Spanish latte"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg"
-                  alt="Iced Spanish latte"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="drinks" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" data-caption="Iced Spanish latte">
+              <span class="gallery__frame"><img src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" alt="Iced Spanish latte" loading="lazy" /></span>
               <span class="gallery__caption">Iced Spanish latte</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="drinks"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Chai%20Blend/taro.jpg"
-              data-caption="Taro chai blend"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Chai%20Blend/taro.jpg"
-                  alt="Taro chai blend"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="drinks" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Chai%20Blend/taro.jpg" data-caption="Taro chai blend">
+              <span class="gallery__frame"><img src="assets/Chai%20Blend/taro.jpg" alt="Taro chai blend" loading="lazy" /></span>
               <span class="gallery__caption">Taro chai blend</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="food"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Food%20%26%20Snacks/baked_penne.jpg"
-              data-caption="Baked penne pasta"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Food%20%26%20Snacks/baked_penne.jpg"
-                  alt="Baked penne pasta"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="food" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/baked_penne.jpg" data-caption="Baked penne pasta">
+              <span class="gallery__frame"><img src="assets/Food%20%26%20Snacks/baked_penne.jpg" alt="Baked penne pasta" loading="lazy" /></span>
               <span class="gallery__caption">Baked penne pasta</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="food"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Food%20%26%20Snacks/quesadilla.jpg"
-              data-caption="Quesadilla from our kitchen"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Food%20%26%20Snacks/quesadilla.jpg"
-                  alt="Quesadilla from our kitchen"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="food" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/quesadilla.jpg" data-caption="Quesadilla from our kitchen">
+              <span class="gallery__frame"><img src="assets/Food%20%26%20Snacks/quesadilla.jpg" alt="Quesadilla from our kitchen" loading="lazy" /></span>
               <span class="gallery__caption">Quesadilla from our kitchen</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="food"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Food%20%26%20Snacks/nachos.jpg"
-              data-caption="Nachos to share"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Food%20%26%20Snacks/nachos.jpg"
-                  alt="Nachos to share"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="food" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/nachos.jpg" data-caption="Nachos to share">
+              <span class="gallery__frame"><img src="assets/Food%20%26%20Snacks/nachos.jpg" alt="Nachos to share" loading="lazy" /></span>
               <span class="gallery__caption">Nachos to share</span>
             </button>
           </div>
-          <div
-            class="gallery__item"
-            data-cat="food"
-            data-reveal="clip"
-            style="--r: 20px"
-          >
-            <button
-              class="gallery__btn"
-              type="button"
-              onclick="openPhoto(this)"
-              data-full="assets/Food%20%26%20Snacks/chicken_alfredo.jpg"
-              data-caption="Chicken alfredo pasta"
-            >
-              <span class="gallery__frame"
-                ><img
-                  src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg"
-                  alt="Chicken alfredo pasta"
-                  loading="lazy"
-              /></span>
+          <div class="gallery__item" data-cat="food" data-reveal="clip" style="--r: 20px">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" data-caption="Chicken alfredo pasta">
+              <span class="gallery__frame"><img src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" alt="Chicken alfredo pasta" loading="lazy" /></span>
               <span class="gallery__caption">Chicken alfredo pasta</span>
             </button>
           </div>
         </div>
       </section>
       <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
-        <button
-          class="lightbox__close"
-          type="button"
-          onclick="closePhoto()"
-          aria-label="Close photo"
-        >
-          <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
-        </button>
+        <button class="lightbox__close" type="button" onclick="closePhoto()" aria-label="Close photo"><svg class="icon " aria-hidden="true"><use href="#i-x"></use></svg></button>
         <img src="" alt="" />
         <p></p>
       </dialog>
       <section class="container section" aria-label="Next step">
         <div class="band" data-reveal="zoom">
           <p class="eyebrow">Come see it for yourself</p>
-          <h2 data-split style="margin-top: var(--space-3)">
-            Pull up <span class="accent">a chair.</span>
-          </h2>
-          <p style="margin-top: var(--space-4)">
-            Reserve a table or find your nearest branch.
-          </p>
-          <div class="cluster" style="margin-top: var(--space-5)">
-            <a class="btn btn--primary btn--lg" href="reserve.html"
-              >Reserve a table
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow-right"></use></svg></a
-            ><a class="btn btn--secondary btn--lg" href="branches.html"
-              >Find a branch</a
-            >
-          </div>
+          <h2 data-split style="margin-top: var(--space-3)">Pull up <span class="accent">a chair.</span></h2>
+          <p style="margin-top: var(--space-4)">Reserve a table or find your nearest branch.</p>
+          <div class="cluster" style="margin-top: var(--space-5)"><a class="btn btn--primary btn--lg" href="reserve.html">Reserve a table <svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></a><a class="btn btn--secondary btn--lg" href="branches.html">Find a branch</a></div>
         </div>
       </section>
     </main>
@@ -709,56 +248,16 @@
           <div>
             <h3>Let’s connect</h3>
             <ul>
-              <li>
-                <a href="tel:+639270073822"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-phone"></use>
-                  </svg>
-                  +63 927 007 3822</a
-                >
-              </li>
-              <li>
-                <a href="mailto:cafeblkandbrwn@gmail.com"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-mail"></use>
-                  </svg>
-                  cafeblkandbrwn@gmail.com</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://web.facebook.com/cafeblkandbrwn"
-                  target="_blank"
-                  rel="noopener"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-facebook"></use>
-                  </svg>
-                  Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/cafeblkandbrwn/"
-                  target="_blank"
-                  rel="noopener"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-instagram"></use>
-                  </svg>
-                  Instagram</a
-                >
-              </li>
+              <li><a href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> +63 927 007 3822</a></li>
+              <li><a href="mailto:cafeblkandbrwn@gmail.com"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg> cafeblkandbrwn@gmail.com</a></li>
+              <li><a href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a></li>
+              <li><a href="https://www.instagram.com/cafeblkandbrwn/" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-instagram"></use></svg> Instagram</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-mark" data-split aria-hidden="true">
-          BLK &amp; BRWN
-        </div>
+        <div class="footer-mark" data-split aria-hidden="true">BLK &amp; BRWN</div>
         <div class="footer-bottom">
-          <p>
-            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
-            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
-            312 Web Development project.
-          </p>
+          <p>© <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.</p>
           <ul>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="staff.html">Staff access</a></li>

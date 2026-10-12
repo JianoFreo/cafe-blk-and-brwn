@@ -42,3 +42,11 @@ function confirmBooking(button) {
   pending.textContent = Number(pending.textContent) - 1;
   confirmed.textContent = Number(confirmed.textContent) + 1;
 }
+
+// label every cell with its column title so the tables can become cards on phones
+document.querySelectorAll("table").forEach((table) => {
+  const titles = Array.from(table.querySelectorAll("th")).map((th) => th.textContent.trim());
+  table.querySelectorAll("tbody tr").forEach((row) => {
+    Array.from(row.children).forEach((cell, i) => cell.setAttribute("data-label", titles[i] || ""));
+  });
+});

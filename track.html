@@ -2,30 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Reservation status | Café BLK &amp; BRWN</title>
-    <meta
-      name="description"
-      content="See where your Café BLK &amp; BRWN reservation stands, from request to confirmed table."
-    />
+    <meta name="description" content="See where your Café BLK &amp; BRWN reservation stands, from request to confirmed table." />
     <meta name="theme-color" content="#0b0806" />
-    <meta
-      property="og:title"
-      content="Reservation status | Café BLK &amp; BRWN"
-    />
-    <meta
-      property="og:description"
-      content="See where your Café BLK &amp; BRWN reservation stands, from request to confirmed table."
-    />
+    <meta property="og:title" content="Reservation status | Café BLK &amp; BRWN" />
+    <meta property="og:description" content="See where your Café BLK &amp; BRWN reservation stands, from request to confirmed table." />
     <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/style.css" />
     <script>
       document.documentElement.classList.add("js");
-
+      
       setTimeout(function () {
         if (!document.documentElement.classList.contains("motion-ready")) {
           document.documentElement.classList.add("no-motion");
@@ -39,12 +27,7 @@
     <div class="scroll-progress" aria-hidden="true"><i></i></div>
     <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="grain" aria-hidden="true"></div>
-    <div class="page-curtain" aria-hidden="true">
-      <div class="page-curtain__logo">
-        <img src="assets/logo.jpg" alt="" />
-        <p>BLK &amp; BRWN</p>
-      </div>
-    </div>
+    <div class="page-curtain" aria-hidden="true"><div class="page-curtain__logo"><img src="assets/logo.jpg" alt="" /><p>BLK &amp; BRWN</p></div></div>
 
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
@@ -62,30 +45,11 @@
           <li><a href="branches.html">Branches</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta">
-            <a class="btn btn--primary btn--sm" href="reserve.html"
-              ><svg class="icon" aria-hidden="true">
-                <use href="#i-calendar"></use>
-              </svg>
-              Reserve a table</a
-            >
-          </li>
+          <li class="nav-cta"><a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a></li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
-        ><svg class="icon" aria-hidden="true">
-          <use href="#i-calendar"></use>
-        </svg>
-        Reserve a table</a
-      >
-      <button
-        class="nav-toggle"
-        type="button"
-        onclick="toggleMenu()"
-        aria-expanded="false"
-        aria-controls="nav"
-        aria-label="Menu"
-      >
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a>
+      <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav" aria-label="Menu">
         <span class="nav-toggle__bars"><i></i><i></i></span>
       </button>
     </header>
@@ -94,104 +58,38 @@
       <header class="container page-intro">
         <div class="stack">
           <p class="eyebrow" data-reveal="rise">Your next visit</p>
-          <h1 data-split>
-            Your plans, <span class="accent">in one place.</span>
-          </h1>
-          <p class="lead" data-reveal="rise" style="--d: 350">
-            See where your reservation stands, from request to confirmed table.
-          </p>
+          <h1 data-split>Your plans, <span class="accent">in one place.</span></h1>
+          <p class="lead" data-reveal="rise" style="--d: 350">See where your reservation stands, from request to confirmed table.</p>
         </div>
       </header>
       <section class="container section--tight">
         <div class="split split--flip" style="align-items: start">
           <div class="glass card" data-reveal="flip" data-tilt>
             <div class="cluster" style="justify-content: space-between">
-              <div>
-                <p class="eyebrow">Reference BNB-1010-005</p>
-                <h2 class="heading-lg" style="margin-top: var(--space-2)">
-                  Juan Dela Cruz
-                </h2>
-              </div>
-              <span class="pill confirmed"
-                ><svg class="icon" aria-hidden="true">
-                  <use href="#i-check"></use>
-                </svg>
-                Confirmed</span
-              >
+              <div><p class="eyebrow">Reference BNB-1010-005</p><h2 class="heading-lg" style="margin-top: var(--space-2)">Juan Dela Cruz</h2></div>
+              <span class="pill confirmed"><svg class="icon " aria-hidden="true"><use href="#i-check"></use></svg> Confirmed</span>
             </div>
-            <div class="flow__head" style="margin-top: var(--space-5)">
-              <span>Reservation progress</span><span>Stage 3 of 4</span>
-            </div>
+            <div class="flow__head" style="margin-top: var(--space-5)"><span>Reservation progress</span><span>Stage 3 of 4</span></div>
             <div class="track" data-reveal="rise">
               <div class="track__bar"><i></i></div>
-              <ol class="track__steps">
-                <li class="track__step is-done" style="--i: 0">
-                  <span class="track__dot"></span
-                  ><strong>Request received</strong><span>Oct 8</span>
-                </li>
-                <li class="track__step is-done" style="--i: 1">
-                  <span class="track__dot"></span><strong>Under review</strong
-                  ><span>Oct 8</span>
-                </li>
-                <li class="track__step is-current" style="--i: 2">
-                  <span class="track__dot"></span><strong>Confirmed</strong
-                  ><span>Oct 9</span>
-                </li>
-                <li class="track__step" style="--i: 3">
-                  <span class="track__dot"></span><strong>Visit day</strong
-                  ><span>Oct 10</span>
-                </li>
-              </ol>
+              <ol class="track__steps"><li class="track__step is-done" style="--i:0"><span class="track__dot"></span><strong>Request received</strong><span>Oct 8</span></li><li class="track__step is-done" style="--i:1"><span class="track__dot"></span><strong>Under review</strong><span>Oct 8</span></li><li class="track__step is-current" style="--i:2"><span class="track__dot"></span><strong>Confirmed</strong><span>Oct 9</span></li><li class="track__step " style="--i:3"><span class="track__dot"></span><strong>Visit day</strong><span>Oct 10</span></li></ol>
             </div>
             <dl class="track__details">
-              <div>
-                <dt>Branch</dt>
-                <dd>Naic, Cavite</dd>
-              </div>
-              <div>
-                <dt>Date</dt>
-                <dd>Saturday, October 10, 2026</dd>
-              </div>
-              <div>
-                <dt>Time</dt>
-                <dd>2:00 PM · 1 hour 30 minutes</dd>
-              </div>
-              <div>
-                <dt>Guests</dt>
-                <dd>4 people</dd>
-              </div>
+              <div><dt>Branch</dt><dd>Naic, Cavite</dd></div>
+              <div><dt>Date</dt><dd>Saturday, October 10, 2026</dd></div>
+              <div><dt>Time</dt><dd>2:00 PM · 1 hour 30 minutes</dd></div>
+              <div><dt>Guests</dt><dd>4 people</dd></div>
             </dl>
-            <p class="small muted">
-              Sample view. Live status lookups need a backend.
-            </p>
+            <p class="small muted">Sample view. Live status lookups need a backend.</p>
           </div>
           <div class="stack--lg">
             <div class="glass card" data-reveal="slide-r">
               <p class="eyebrow">Plans changed?</p>
               <h2 class="heading-md">Let us know early</h2>
-              <p>
-                To move, add guests to, or cancel a reservation, contact the
-                café with your reference and we will update your table.
-              </p>
-              <div class="cluster">
-                <a class="btn btn--secondary" href="tel:+639270073822"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-phone"></use>
-                  </svg>
-                  Call +63 927 007 3822</a
-                ><a class="text-link" href="mailto:cafeblkandbrwn@gmail.com"
-                  >Email the café</a
-                >
-              </div>
+              <p>To move, add guests to, or cancel a reservation, contact the café with your reference and we will update your table.</p>
+              <div class="cluster"><a class="btn btn--secondary" href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> Call +63 927 007 3822</a><a class="text-link" href="mailto:cafeblkandbrwn@gmail.com">Email the café</a></div>
             </div>
-            <a
-              class="btn btn--primary btn--lg"
-              href="reserve.html"
-              data-reveal="pop"
-              >Make a new reservation
-              <svg class="icon" aria-hidden="true">
-                <use href="#i-arrow-right"></use></svg
-            ></a>
+            <a class="btn btn--primary btn--lg" href="reserve.html" data-reveal="pop">Make a new reservation <svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
           </div>
         </div>
       </section>
@@ -218,56 +116,16 @@
           <div>
             <h3>Let’s connect</h3>
             <ul>
-              <li>
-                <a href="tel:+639270073822"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-phone"></use>
-                  </svg>
-                  +63 927 007 3822</a
-                >
-              </li>
-              <li>
-                <a href="mailto:cafeblkandbrwn@gmail.com"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-mail"></use>
-                  </svg>
-                  cafeblkandbrwn@gmail.com</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://web.facebook.com/cafeblkandbrwn"
-                  target="_blank"
-                  rel="noopener"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-facebook"></use>
-                  </svg>
-                  Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/cafeblkandbrwn/"
-                  target="_blank"
-                  rel="noopener"
-                  ><svg class="icon" aria-hidden="true">
-                    <use href="#i-instagram"></use>
-                  </svg>
-                  Instagram</a
-                >
-              </li>
+              <li><a href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> +63 927 007 3822</a></li>
+              <li><a href="mailto:cafeblkandbrwn@gmail.com"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg> cafeblkandbrwn@gmail.com</a></li>
+              <li><a href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a></li>
+              <li><a href="https://www.instagram.com/cafeblkandbrwn/" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-instagram"></use></svg> Instagram</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-mark" data-split aria-hidden="true">
-          BLK &amp; BRWN
-        </div>
+        <div class="footer-mark" data-split aria-hidden="true">BLK &amp; BRWN</div>
         <div class="footer-bottom">
-          <p>
-            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
-            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
-            312 Web Development project.
-          </p>
+          <p>© <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.</p>
           <ul>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="staff.html">Staff access</a></li>
