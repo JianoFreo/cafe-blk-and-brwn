@@ -4,6 +4,8 @@ function showCategory(button, id) {
   tabs.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
   button.classList.add("on");
   glideTabs(tabs);
+  const bar = tabs.parentElement;
+  if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: button.offsetLeft - (bar.clientWidth - button.offsetWidth) / 2, behavior: "smooth" });
 
   document.querySelectorAll(".menu-group").forEach((group) => group.classList.remove("show"));
   const group = document.getElementById(id);

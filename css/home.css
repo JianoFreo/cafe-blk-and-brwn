@@ -195,3 +195,6 @@
 :is(html.no-motion, html:not(.js)) .hscroll__bar, :is(html.no-motion, html:not(.js)) .drinks__bar { display: none; }
 :is(html.no-motion, html:not(.js)) .scrub .sw, :is(html.no-motion, html:not(.js)) .steps--scrub .steps__item { opacity: 1; }
 :is(html.no-motion, html:not(.js)) .marquee { overflow-x: auto; }
+
+.drinks__dots { display: none; }
+.drinks__cta { justify-self: start; }

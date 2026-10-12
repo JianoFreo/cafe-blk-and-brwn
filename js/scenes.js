@@ -68,7 +68,9 @@
     }
     s.on = function (p) { set(Math.min(n - 1, Math.floor(p * n * 0.9999))); };
     set(0);
-    buttons.forEach(function (b, i) {
+    var clickers = el.querySelectorAll(".drinks__list button, .drinks__dots button");
+    Array.prototype.forEach.call(clickers, function (b) {
+      var i = +b.getAttribute("data-i");
       b.addEventListener("click", function () {
         var range = s.range;
         var p = range[0] + ((i + 0.5) / n) * (range[1] - range[0]);

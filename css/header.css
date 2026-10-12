@@ -12,7 +12,7 @@
 
 .site-header {
   position: sticky;
-  top: var(--space-3);
+  top: calc(var(--space-3) + env(safe-area-inset-top));
   z-index: 100;
   width: min(1320px, 100% - 2 * var(--gutter));
   margin: var(--space-3) auto 0;
