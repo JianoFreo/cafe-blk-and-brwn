@@ -2,18 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Menu | Café BLK &amp; BRWN</title>
-    <meta name="description" content="Café BLK &amp; BRWN menu and prices: Kape Series, Chai Blend, Choco Series, Over-Ice, Freskaró Juices, hot beverages, food and snacks." />
+    <meta
+      name="description"
+      content="Café BLK &amp; BRWN menu and prices: Kape Series, Chai Blend, Choco Series, Over-Ice, Freskaró Juices, hot beverages, food and snacks."
+    />
     <meta name="theme-color" content="#0b0806" />
     <meta property="og:title" content="Menu | Café BLK &amp; BRWN" />
-    <meta property="og:description" content="Café BLK &amp; BRWN menu and prices: Kape Series, Chai Blend, Choco Series, Over-Ice, Freskaró Juices, hot beverages, food and snacks." />
+    <meta
+      property="og:description"
+      content="Café BLK &amp; BRWN menu and prices: Kape Series, Chai Blend, Choco Series, Over-Ice, Freskaró Juices, hot beverages, food and snacks."
+    />
     <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/style.css" />
     <script>
       document.documentElement.classList.add("js");
-      
+
       setTimeout(function () {
         if (!document.documentElement.classList.contains("motion-ready")) {
           document.documentElement.classList.add("no-motion");
@@ -27,7 +36,12 @@
     <div class="scroll-progress" aria-hidden="true"><i></i></div>
     <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="grain" aria-hidden="true"></div>
-    <div class="page-curtain" aria-hidden="true"><div class="page-curtain__logo"><img src="assets/logo.jpg" alt="" /><p>BLK &amp; BRWN</p></div></div>
+    <div class="page-curtain" aria-hidden="true">
+      <div class="page-curtain__logo">
+        <img src="assets/logo.jpg" alt="" />
+        <p>BLK &amp; BRWN</p>
+      </div>
+    </div>
 
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
@@ -45,11 +59,30 @@
           <li><a href="branches.html">Branches</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta"><a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a></li>
+          <li class="nav-cta">
+            <a class="btn btn--primary btn--sm" href="reserve.html"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-calendar"></use>
+              </svg>
+              Reserve a table</a
+            >
+          </li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a>
-      <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
+        ><svg class="icon" aria-hidden="true">
+          <use href="#i-calendar"></use>
+        </svg>
+        Reserve a table</a
+      >
+      <button
+        class="nav-toggle"
+        type="button"
+        onclick="toggleMenu()"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Menu"
+      >
         <span class="nav-toggle__bars"><i></i><i></i></span>
       </button>
     </header>
@@ -58,400 +91,1881 @@
       <header class="container page-intro">
         <div class="stack">
           <p class="eyebrow" data-reveal="rise">Something for every mood</p>
-          <h1 data-split>Your next favorite <span class="accent">starts here.</span></h1>
-          <p class="lead" data-reveal="rise" style="--d: 350">Pick a category, find your favorite, and make it a little more you with migalo.</p>
+          <h1 data-split>
+            Your next favorite <span class="accent">starts here.</span>
+          </h1>
+          <p class="lead" data-reveal="rise" style="--d: 350">
+            Pick a category, find your favorite, and make it a little more you
+            with migalo.
+          </p>
         </div>
       </header>
-      <div class="container menu-tabs-wrap" data-reveal="rise" style="--d: 500"><div class="tabs" role="tablist" aria-label="Menu categories"><span class="tabs__glide"></span><button class="tab on" type="button" data-target="kape" onclick="showCategory(this, 'kape')">Kape Series</button><button class="tab" type="button" data-target="chai" onclick="showCategory(this, 'chai')">Chai Blend</button><button class="tab" type="button" data-target="choco" onclick="showCategory(this, 'choco')">Choco Series</button><button class="tab" type="button" data-target="iced" onclick="showCategory(this, 'iced')">Over-Ice Series</button><button class="tab" type="button" data-target="juices" onclick="showCategory(this, 'juices')">Freskaró Juices</button><button class="tab" type="button" data-target="hot" onclick="showCategory(this, 'hot')">Hot Beverages</button><button class="tab" type="button" data-target="food" onclick="showCategory(this, 'food')">Food &amp; Snacks</button></div></div>
+      <div class="container menu-tabs-wrap" data-reveal="rise" style="--d: 500">
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <span class="tabs__glide"></span
+          ><button
+            class="tab on"
+            type="button"
+            data-target="kape"
+            onclick="showCategory(this, 'kape')"
+          >
+            Kape Series</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="chai"
+            onclick="showCategory(this, 'chai')"
+          >
+            Chai Blend</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="choco"
+            onclick="showCategory(this, 'choco')"
+          >
+            Choco Series</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="iced"
+            onclick="showCategory(this, 'iced')"
+          >
+            Over-Ice Series</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="juices"
+            onclick="showCategory(this, 'juices')"
+          >
+            Freskaró Juices</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="hot"
+            onclick="showCategory(this, 'hot')"
+          >
+            Hot Beverages</button
+          ><button
+            class="tab"
+            type="button"
+            data-target="food"
+            onclick="showCategory(this, 'food')"
+          >
+            Food &amp; Snacks
+          </button>
+        </div>
+      </div>
       <div class="menu-groups" style="padding-top: var(--space-6)">
-      <section class="container menu-group show" id="kape" aria-labelledby="kape-title">
-        <div class="section-head">
-          <h2 id="kape-title">Kape Series</h2>
-          <p class="price-from">7 items · from PHP 125</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/bnb_signature_kape.jpg" alt="BNB Signature Kape" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>BNB Signature Kape</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>140</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/cappucino.jpg" alt="Cappuccino" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Cappuccino</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/caramel_macc_kape.jpg" alt="Caramel Macc Kape" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Caramel Macc Kape</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/dark_mocha.jpg" alt="Dark Mocha" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Dark Mocha</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>150</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/hp_salted_caramel_macc_kape.jpg" alt="HP Salted Caramel Macc Kape" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>HP Salted Caramel Macc Kape</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/mocha_kape.jpg" alt="Mocha Kape" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Mocha Kape</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>150</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Kape%20Series/oreo_coffee.jpg" alt="Oreo Coffee" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Oreo Coffee</h3><p class="menu-card__note">Add migalo +PHP 35</p><p class="price"><span class="price__currency">PHP</span>140</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="chai" aria-labelledby="chai-title">
-        <div class="section-head">
-          <h2 id="chai-title">Chai Blend</h2>
-          <p class="price-from">8 items · from PHP 110</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/blackhole.jpg" alt="Blackhole" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Blackhole</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>110</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/choco_brownies.jpg" alt="Choco Brownies" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Choco Brownies</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/classic_milktea.jpg" alt="Classic Milktea" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Classic Milktea</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>115</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/matcha.jpg" alt="Matcha" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Matcha</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/okinawa.jpg" alt="Okinawa" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Okinawa</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/oreo_cookies.jpg" alt="Oreo Cookies" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Oreo Cookies</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>115</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/taro.jpg" alt="Taro" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Taro</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Chai%20Blend/wintermelon.jpg" alt="Wintermelon" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Wintermelon</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="choco" aria-labelledby="choco-title">
-        <div class="section-head">
-          <h2 id="choco-title">Choco Series</h2>
-          <p class="price-from">8 items · from PHP 155</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/cheesecake.jpg" alt="Cheesecake" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Cheesecake</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/choco_fudge.jpg" alt="Choco Fudge" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Choco Fudge</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/matcha_kitkat.jpg" alt="Matcha Kitkat" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Matcha Kitkat</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/nutella_ferrero.jpg" alt="Nutella Ferrero" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Nutella Ferrero</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>180</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/oreo_vanilla.jpg" alt="Oreo Vanilla" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Oreo Vanilla</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>160</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/roasted_almond.jpg" alt="Roasted Almond" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Roasted Almond</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>175</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/strawberry_creme.jpg" alt="Strawberry Creme" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Strawberry Creme</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>155</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Choco%20Series/ube_cream_cheese.jpg" alt="Ube Cream Cheese" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Ube Cream Cheese</h3><p class="menu-card__note">Add migalo +PHP 45</p><p class="price"><span class="price__currency">PHP</span>160</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="iced" aria-labelledby="iced-title">
-        <div class="section-head">
-          <h2 id="iced-title">Over-Ice Series</h2>
-          <p class="price-from">12 items · from PHP 100</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/americano.jpg" alt="Americano" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Americano</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>100</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/bnb_signature.jpg" alt="BNB Signature" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>BNB Signature</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/cafe_latte.jpg" alt="Cafe Latte" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Cafe Latte</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>115</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/caramel_macc.jpg" alt="Caramel Macc" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Caramel Macc</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/hp_salted_caramel.jpg" alt="HP Salted Caramel" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>HP Salted Caramel</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/irish_coffee.jpg" alt="Irish Coffee" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Irish Coffee</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/matcha_latte.jpg" alt="Matcha Latte" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Matcha Latte</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/mocha.jpg" alt="Mocha" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Mocha</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/roasted_almond_oatmilk_latte.jpg" alt="Roasted Almond Oatmilk Latte" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Roasted Almond Oatmilk Latte</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" alt="Spanish Latte" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Spanish Latte</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/triple_choco.jpg" alt="Triple Choco" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Triple Choco</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Over%20-%20Ice%20Series/white_mocha.jpg" alt="White Mocha" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>White Mocha</h3><p class="menu-card__note">Add migalo +PHP 30</p><p class="price"><span class="price__currency">PHP</span>155</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="juices" aria-labelledby="juices-title">
-        <div class="section-head">
-          <h2 id="juices-title">Freskaró Juices</h2>
-          <p class="price-from">8 items · from PHP 95</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/avc.jpg" alt="AVC" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>AVC</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>100</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/four_seasons.jpg" alt="Four Seasons" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Four Seasons</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/healtea.jpg" alt="Healtea" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Healtea</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/lemonade.jpg" alt="Lemonade" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Lemonade</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/lychee.jpg" alt="Lychee" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Lychee</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>100</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/passion_fruit.jpg" alt="Passion Fruit" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Passion Fruit</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>100</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/pineapple.jpg" alt="Pineapple" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Pineapple</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Freskaro%20Juices/trueberries.jpg" alt="Trueberries" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Trueberries</h3><p class="menu-card__note">Add migalo +PHP 25</p><p class="price"><span class="price__currency">PHP</span>110</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="hot" aria-labelledby="hot-title">
-        <div class="section-head">
-          <h2 id="hot-title">Hot Beverages</h2>
-          <p class="price-from">14 items · from PHP 75</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/brewed_coffee.jpg" alt="Brewed Coffee" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Brewed Coffee</h3><p class="price"><span class="price__currency">PHP</span>90</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/coffee_latte.jpg" alt="Coffee Latte" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Coffee Latte</h3><p class="price"><span class="price__currency">PHP</span>125</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/espresso.jpg" alt="Espresso" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Espresso</h3><p class="price"><span class="price__currency">PHP</span>75</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_americano.jpg" alt="Hot Americano" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Americano</h3><p class="price"><span class="price__currency">PHP</span>100</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_bnb_signature.jpg" alt="Hot BNB Signature" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot BNB Signature</h3><p class="price"><span class="price__currency">PHP</span>120</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_cappucino.jpg" alt="Hot Cappuccino" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Cappuccino</h3><p class="price"><span class="price__currency">PHP</span>130</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_caramel_macc.jpg" alt="Hot Caramel Macc" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Hot Caramel Macc</h3><p class="price"><span class="price__currency">PHP</span>135</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_healtea.jpg" alt="Hot Healtea" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Healtea</h3><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_irish_coffee.jpg" alt="Hot Irish Coffee" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Hot Irish Coffee</h3><p class="price"><span class="price__currency">PHP</span>130</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_matcha_latte.jpg" alt="Hot Matcha Latte" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Matcha Latte</h3><p class="price"><span class="price__currency">PHP</span>130</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_roasted_almond.jpg" alt="Hot Roasted Almond" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Roasted Almond</h3><p class="price"><span class="price__currency">PHP</span>90</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/hot_triple_choco.jpg" alt="Hot Triple Choco" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hot Triple Choco</h3><p class="price"><span class="price__currency">PHP</span>135</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/mocha_latte.jpg" alt="Mocha Latte" width="360" height="360" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Popular pick</span></div>
-            <div class="menu-card__body"><h3>Mocha Latte</h3><p class="price"><span class="price__currency">PHP</span>135</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Hot%20Beverages/tea.jpg" alt="Tea" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Tea</h3><p class="price"><span class="price__currency">PHP</span>90</p></div>
-          </article></li>
-        </ul>
-      </section>
-      <section class="container menu-group" id="food" aria-labelledby="food-title">
-        <div class="section-head">
-          <h2 id="food-title">Food &amp; Snacks</h2>
-          <p class="price-from">24 items · from PHP 95</p>
-        </div>
-        <ul class="menu-grid" data-stagger="flip" data-cols="5" data-step="70">
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/aglio_e_olio_tuyo.jpg" alt="Aglio e Olio Tuyo" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Aglio e Olio Tuyo</h3><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/bacon_and_pancakes.jpg" alt="Bacon and Pancakes" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Bacon and Pancakes</h3><p class="price"><span class="price__currency">PHP</span>175</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/baked_penne.jpg" alt="Baked Penne" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Baked Penne</h3><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/bnb_toast.jpg" alt="BNB Toast" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>BNB Toast</h3><p class="price"><span class="price__currency">PHP</span>135</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" alt="Chicken Alfredo" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Chicken Alfredo</h3><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/chicken_fajita_roll.jpg" alt="Chicken Fajita Roll" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Chicken Fajita Roll</h3><p class="price"><span class="price__currency">PHP</span>175</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/chicken_nuggets.jpg" alt="Chicken Nuggets" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Chicken Nuggets</h3><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/chicken_popcorn.jpg" alt="Chicken Popcorn" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Chicken Popcorn</h3><p class="price"><span class="price__currency">PHP</span>185</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/chicken_salad.jpg" alt="Chicken Salad" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Chicken Salad</h3><p class="price"><span class="price__currency">PHP</span>105</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/creamy_pesto.jpg" alt="Creamy Pesto" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Creamy Pesto</h3><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/gochujang_pork.jpg" alt="Gochujang Pork" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Gochujang Pork</h3><p class="price"><span class="price__currency">PHP</span>185</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/ham_n_cheese.jpg" alt="Ham n Cheese" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Ham n Cheese</h3><p class="price"><span class="price__currency">PHP</span>115</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/hash_and_egg.jpg" alt="Hash and Egg" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Hash and Egg</h3><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/korean_bulgogi.jpg" alt="Korean Bulgogi" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Korean Bulgogi</h3><p class="price"><span class="price__currency">PHP</span>185</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/mandarin_orange.jpg" alt="Mandarin Orange" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Mandarin Orange</h3><p class="price"><span class="price__currency">PHP</span>185</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/meatballs.jpg" alt="Meatballs" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Meatballs</h3><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/meatballs_and_rice.jpg" alt="Meatballs and Rice" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Meatballs and Rice</h3><p class="price"><span class="price__currency">PHP</span>185</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/nachos.jpg" alt="Nachos" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Nachos</h3><p class="price"><span class="price__currency">PHP</span>145</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/potato_fries.jpg" alt="Potato Fries" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Potato Fries</h3><p class="menu-card__note">Share size PHP 145</p><p class="price"><span class="price__currency">PHP</span>95</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/quesadilla.jpg" alt="Quesadilla" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Quesadilla</h3><p class="price"><span class="price__currency">PHP</span>165</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/spaghetti_meatballs.jpg" alt="Spaghetti Meatballs" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Spaghetti Meatballs</h3><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/spam_musubi.jpg" alt="Spam Musubi" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Spam Musubi</h3><p class="price"><span class="price__currency">PHP</span>220</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/tuna_chives.jpg" alt="Tuna Chives" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Tuna Chives</h3><p class="menu-card__note">Add egg +PHP 25</p><p class="price"><span class="price__currency">PHP</span>105</p></div>
-          </article></li>
-          <li><article class="menu-card glass" data-tilt>
-            <div class="menu-card__photo"><img src="assets/Food%20%26%20Snacks/tuna_pasta.jpg" alt="Tuna Pasta" width="360" height="360" loading="lazy" /></div>
-            <div class="menu-card__body"><h3>Tuna Pasta</h3><p class="price"><span class="price__currency">PHP</span>170</p></div>
-          </article></li>
-        </ul>
-      </section>
+        <section
+          class="container menu-group show"
+          id="kape"
+          aria-labelledby="kape-title"
+        >
+          <div class="section-head">
+            <h2 id="kape-title">Kape Series</h2>
+            <p class="price-from">7 items · from PHP 125</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/bnb_signature_kape.jpg"
+                    alt="BNB Signature Kape"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>BNB Signature Kape</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>140
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/cappucino.jpg"
+                    alt="Cappuccino"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Cappuccino</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/caramel_macc_kape.jpg"
+                    alt="Caramel Macc Kape"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Caramel Macc Kape</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/dark_mocha.jpg"
+                    alt="Dark Mocha"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Dark Mocha</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>150
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/hp_salted_caramel_macc_kape.jpg"
+                    alt="HP Salted Caramel Macc Kape"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>HP Salted Caramel Macc Kape</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/mocha_kape.jpg"
+                    alt="Mocha Kape"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Mocha Kape</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>150
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Kape%20Series/oreo_coffee.jpg"
+                    alt="Oreo Coffee"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Oreo Coffee</h3>
+                  <p class="menu-card__note">Add migalo +PHP 35</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>140
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="chai"
+          aria-labelledby="chai-title"
+        >
+          <div class="section-head">
+            <h2 id="chai-title">Chai Blend</h2>
+            <p class="price-from">8 items · from PHP 110</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/blackhole.jpg"
+                    alt="Blackhole"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Blackhole</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>110
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/choco_brownies.jpg"
+                    alt="Choco Brownies"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Choco Brownies</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/classic_milktea.jpg"
+                    alt="Classic Milktea"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Classic Milktea</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>115
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/matcha.jpg"
+                    alt="Matcha"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Matcha</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/okinawa.jpg"
+                    alt="Okinawa"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Okinawa</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/oreo_cookies.jpg"
+                    alt="Oreo Cookies"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Oreo Cookies</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>115
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/taro.jpg"
+                    alt="Taro"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Taro</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Chai%20Blend/wintermelon.jpg"
+                    alt="Wintermelon"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Wintermelon</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="choco"
+          aria-labelledby="choco-title"
+        >
+          <div class="section-head">
+            <h2 id="choco-title">Choco Series</h2>
+            <p class="price-from">8 items · from PHP 155</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/cheesecake.jpg"
+                    alt="Cheesecake"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Cheesecake</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/choco_fudge.jpg"
+                    alt="Choco Fudge"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Choco Fudge</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/matcha_kitkat.jpg"
+                    alt="Matcha Kitkat"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Matcha Kitkat</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/nutella_ferrero.jpg"
+                    alt="Nutella Ferrero"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Nutella Ferrero</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>180
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/oreo_vanilla.jpg"
+                    alt="Oreo Vanilla"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Oreo Vanilla</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>160
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/roasted_almond.jpg"
+                    alt="Roasted Almond"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Roasted Almond</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>175
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/strawberry_creme.jpg"
+                    alt="Strawberry Creme"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Strawberry Creme</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>155
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Choco%20Series/ube_cream_cheese.jpg"
+                    alt="Ube Cream Cheese"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Ube Cream Cheese</h3>
+                  <p class="menu-card__note">Add migalo +PHP 45</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>160
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="iced"
+          aria-labelledby="iced-title"
+        >
+          <div class="section-head">
+            <h2 id="iced-title">Over-Ice Series</h2>
+            <p class="price-from">12 items · from PHP 100</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/americano.jpg"
+                    alt="Americano"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Americano</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>100
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/bnb_signature.jpg"
+                    alt="BNB Signature"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>BNB Signature</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/cafe_latte.jpg"
+                    alt="Cafe Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Cafe Latte</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>115
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/caramel_macc.jpg"
+                    alt="Caramel Macc"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Caramel Macc</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/hp_salted_caramel.jpg"
+                    alt="HP Salted Caramel"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>HP Salted Caramel</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/irish_coffee.jpg"
+                    alt="Irish Coffee"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Irish Coffee</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/matcha_latte.jpg"
+                    alt="Matcha Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Matcha Latte</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/mocha.jpg"
+                    alt="Mocha"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Mocha</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/roasted_almond_oatmilk_latte.jpg"
+                    alt="Roasted Almond Oatmilk Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Roasted Almond Oatmilk Latte</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg"
+                    alt="Spanish Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Spanish Latte</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/triple_choco.jpg"
+                    alt="Triple Choco"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Triple Choco</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Over%20-%20Ice%20Series/white_mocha.jpg"
+                    alt="White Mocha"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>White Mocha</h3>
+                  <p class="menu-card__note">Add migalo +PHP 30</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>155
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="juices"
+          aria-labelledby="juices-title"
+        >
+          <div class="section-head">
+            <h2 id="juices-title">Freskaró Juices</h2>
+            <p class="price-from">8 items · from PHP 95</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/avc.jpg"
+                    alt="AVC"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>AVC</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>100
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/four_seasons.jpg"
+                    alt="Four Seasons"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Four Seasons</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/healtea.jpg"
+                    alt="Healtea"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Healtea</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/lemonade.jpg"
+                    alt="Lemonade"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Lemonade</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/lychee.jpg"
+                    alt="Lychee"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Lychee</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>100
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/passion_fruit.jpg"
+                    alt="Passion Fruit"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Passion Fruit</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>100
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/pineapple.jpg"
+                    alt="Pineapple"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Pineapple</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Freskaro%20Juices/trueberries.jpg"
+                    alt="Trueberries"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Trueberries</h3>
+                  <p class="menu-card__note">Add migalo +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>110
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="hot"
+          aria-labelledby="hot-title"
+        >
+          <div class="section-head">
+            <h2 id="hot-title">Hot Beverages</h2>
+            <p class="price-from">14 items · from PHP 75</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/brewed_coffee.jpg"
+                    alt="Brewed Coffee"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Brewed Coffee</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>90
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/coffee_latte.jpg"
+                    alt="Coffee Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Coffee Latte</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>125
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/espresso.jpg"
+                    alt="Espresso"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Espresso</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>75
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_americano.jpg"
+                    alt="Hot Americano"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Americano</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>100
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_bnb_signature.jpg"
+                    alt="Hot BNB Signature"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot BNB Signature</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>120
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_cappucino.jpg"
+                    alt="Hot Cappuccino"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Cappuccino</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>130
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_caramel_macc.jpg"
+                    alt="Hot Caramel Macc"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Caramel Macc</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>135
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_healtea.jpg"
+                    alt="Hot Healtea"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Healtea</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_irish_coffee.jpg"
+                    alt="Hot Irish Coffee"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Irish Coffee</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>130
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_matcha_latte.jpg"
+                    alt="Hot Matcha Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Matcha Latte</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>130
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_roasted_almond.jpg"
+                    alt="Hot Roasted Almond"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Roasted Almond</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>90
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/hot_triple_choco.jpg"
+                    alt="Hot Triple Choco"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hot Triple Choco</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>135
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/mocha_latte.jpg"
+                    alt="Mocha Latte"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  /><span class="badge"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-star"></use>
+                    </svg>
+                    Popular pick</span
+                  >
+                </div>
+                <div class="menu-card__body">
+                  <h3>Mocha Latte</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>135
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Hot%20Beverages/tea.jpg"
+                    alt="Tea"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Tea</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>90
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="container menu-group"
+          id="food"
+          aria-labelledby="food-title"
+        >
+          <div class="section-head">
+            <h2 id="food-title">Food &amp; Snacks</h2>
+            <p class="price-from">24 items · from PHP 95</p>
+          </div>
+          <ul
+            class="menu-grid"
+            data-stagger="flip"
+            data-cols="5"
+            data-step="70"
+          >
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/aglio_e_olio_tuyo.jpg"
+                    alt="Aglio e Olio Tuyo"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Aglio e Olio Tuyo</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/bacon_and_pancakes.jpg"
+                    alt="Bacon and Pancakes"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Bacon and Pancakes</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>175
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/baked_penne.jpg"
+                    alt="Baked Penne"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Baked Penne</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/bnb_toast.jpg"
+                    alt="BNB Toast"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>BNB Toast</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>135
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg"
+                    alt="Chicken Alfredo"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Chicken Alfredo</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/chicken_fajita_roll.jpg"
+                    alt="Chicken Fajita Roll"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Chicken Fajita Roll</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>175
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/chicken_nuggets.jpg"
+                    alt="Chicken Nuggets"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Chicken Nuggets</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/chicken_popcorn.jpg"
+                    alt="Chicken Popcorn"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Chicken Popcorn</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>185
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/chicken_salad.jpg"
+                    alt="Chicken Salad"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Chicken Salad</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>105
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/creamy_pesto.jpg"
+                    alt="Creamy Pesto"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Creamy Pesto</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/gochujang_pork.jpg"
+                    alt="Gochujang Pork"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Gochujang Pork</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>185
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/ham_n_cheese.jpg"
+                    alt="Ham n Cheese"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Ham n Cheese</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>115
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/hash_and_egg.jpg"
+                    alt="Hash and Egg"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Hash and Egg</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/korean_bulgogi.jpg"
+                    alt="Korean Bulgogi"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Korean Bulgogi</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>185
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/mandarin_orange.jpg"
+                    alt="Mandarin Orange"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Mandarin Orange</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>185
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/meatballs.jpg"
+                    alt="Meatballs"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Meatballs</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/meatballs_and_rice.jpg"
+                    alt="Meatballs and Rice"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Meatballs and Rice</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>185
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/nachos.jpg"
+                    alt="Nachos"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Nachos</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>145
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/potato_fries.jpg"
+                    alt="Potato Fries"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Potato Fries</h3>
+                  <p class="menu-card__note">Share size PHP 145</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>95
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/quesadilla.jpg"
+                    alt="Quesadilla"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Quesadilla</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>165
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/spaghetti_meatballs.jpg"
+                    alt="Spaghetti Meatballs"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Spaghetti Meatballs</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/spam_musubi.jpg"
+                    alt="Spam Musubi"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Spam Musubi</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>220
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/tuna_chives.jpg"
+                    alt="Tuna Chives"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Tuna Chives</h3>
+                  <p class="menu-card__note">Add egg +PHP 25</p>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>105
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="menu-card glass" data-tilt>
+                <div class="menu-card__photo">
+                  <img
+                    src="assets/Food%20%26%20Snacks/tuna_pasta.jpg"
+                    alt="Tuna Pasta"
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="menu-card__body">
+                  <h3>Tuna Pasta</h3>
+                  <p class="price">
+                    <span class="price__currency">PHP</span>170
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
       </div>
       <section class="container menu-footnote" aria-labelledby="menu-cta-title">
         <div class="band" data-reveal="zoom">
           <h2 id="menu-cta-title" data-split>Found your favorite?</h2>
-          <p style="margin-top: var(--space-3)">All prices are in Philippine pesos (PHP). Availability and prices may vary by branch.</p>
+          <p style="margin-top: var(--space-3)">
+            All prices are in Philippine pesos (PHP). Availability and prices
+            may vary by branch.
+          </p>
           <div class="cluster">
-            <a class="btn btn--primary btn--lg" href="reserve.html">Save your seat <svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
-            <a class="btn btn--secondary btn--lg" href="branches.html">Find a branch</a>
+            <a class="btn btn--primary btn--lg" href="reserve.html"
+              >Save your seat
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-right"></use></svg
+            ></a>
+            <a class="btn btn--secondary btn--lg" href="branches.html"
+              >Find a branch</a
+            >
           </div>
         </div>
       </section>
@@ -478,16 +1992,56 @@
           <div>
             <h3>Let’s connect</h3>
             <ul>
-              <li><a href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> +63 927 007 3822</a></li>
-              <li><a href="mailto:cafeblkandbrwn@gmail.com"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg> cafeblkandbrwn@gmail.com</a></li>
-              <li><a href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a></li>
-              <li><a href="https://www.instagram.com/cafeblkandbrwn/" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-instagram"></use></svg> Instagram</a></li>
+              <li>
+                <a href="tel:+639270073822"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-phone"></use>
+                  </svg>
+                  +63 927 007 3822</a
+                >
+              </li>
+              <li>
+                <a href="mailto:cafeblkandbrwn@gmail.com"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  cafeblkandbrwn@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/cafeblkandbrwn"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-facebook"></use>
+                  </svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/cafeblkandbrwn/"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-instagram"></use>
+                  </svg>
+                  Instagram</a
+                >
+              </li>
             </ul>
           </div>
         </div>
-        <div class="footer-mark" data-split aria-hidden="true">BLK &amp; BRWN</div>
+        <div class="footer-mark" data-split aria-hidden="true">
+          BLK &amp; BRWN
+        </div>
         <div class="footer-bottom">
-          <p>© <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.</p>
+          <p>
+            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
+            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
+            312 Web Development project.
+          </p>
           <ul>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="staff.html">Staff access</a></li>

@@ -2,19 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Branches and hours | Café BLK &amp; BRWN</title>
-    <meta name="description" content="Find a Café BLK &amp; BRWN branch: hours, directions and a map of all seven locations across Cavite and Metro Manila." />
+    <meta
+      name="description"
+      content="Find a Café BLK &amp; BRWN branch: hours, directions and a map of all seven locations across Cavite and Metro Manila."
+    />
     <meta name="theme-color" content="#0b0806" />
-    <meta property="og:title" content="Branches and hours | Café BLK &amp; BRWN" />
-    <meta property="og:description" content="Find a Café BLK &amp; BRWN branch: hours, directions and a map of all seven locations across Cavite and Metro Manila." />
+    <meta
+      property="og:title"
+      content="Branches and hours | Café BLK &amp; BRWN"
+    />
+    <meta
+      property="og:description"
+      content="Find a Café BLK &amp; BRWN branch: hours, directions and a map of all seven locations across Cavite and Metro Manila."
+    />
     <meta property="og:image" content="assets/hero_image.jpg" />
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <script>
       document.documentElement.classList.add("js");
-      
+
       setTimeout(function () {
         if (!document.documentElement.classList.contains("motion-ready")) {
           document.documentElement.classList.add("no-motion");
@@ -28,7 +43,12 @@
     <div class="scroll-progress" aria-hidden="true"><i></i></div>
     <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="grain" aria-hidden="true"></div>
-    <div class="page-curtain" aria-hidden="true"><div class="page-curtain__logo"><img src="assets/logo.jpg" alt="" /><p>BLK &amp; BRWN</p></div></div>
+    <div class="page-curtain" aria-hidden="true">
+      <div class="page-curtain__logo">
+        <img src="assets/logo.jpg" alt="" />
+        <p>BLK &amp; BRWN</p>
+      </div>
+    </div>
 
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Café BLK &amp; BRWN, home">
@@ -46,11 +66,30 @@
           <li><a href="branches.html" aria-current="page">Branches</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta"><a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a></li>
+          <li class="nav-cta">
+            <a class="btn btn--primary btn--sm" href="reserve.html"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-calendar"></use>
+              </svg>
+              Reserve a table</a
+            >
+          </li>
         </ul>
       </nav>
-      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve a table</a>
-      <button class="nav-toggle" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <a class="btn btn--primary btn--sm btn--header" href="reserve.html"
+        ><svg class="icon" aria-hidden="true">
+          <use href="#i-calendar"></use>
+        </svg>
+        Reserve a table</a
+      >
+      <button
+        class="nav-toggle"
+        type="button"
+        onclick="toggleMenu()"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Menu"
+      >
         <span class="nav-toggle__bars"><i></i><i></i></span>
       </button>
     </header>
@@ -60,170 +99,647 @@
         <div class="stack">
           <p class="eyebrow" data-reveal="rise">Our locations</p>
           <h1 data-split>Your next <span class="accent">warm corner.</span></h1>
-          <p class="lead" data-reveal="rise" style="--d: 350">From our home in Tanza to Cavite and Alabang. Search by branch name or area, or filter by region.</p>
+          <p class="lead" data-reveal="rise" style="--d: 350">
+            From our home in Tanza to Cavite and Alabang. Search by branch name
+            or area, or filter by region.
+          </p>
         </div>
       </header>
       <section class="container section--tight" aria-label="Find a branch">
-        <input class="input search" type="text" id="search" placeholder="Search by branch name or area" oninput="filterBranches()" aria-label="Search branches" data-reveal="rise" style="max-width: 520px" />
+        <input
+          class="input search"
+          type="text"
+          id="search"
+          placeholder="Search by branch name or area"
+          oninput="filterBranches()"
+          aria-label="Search branches"
+          data-reveal="rise"
+          style="max-width: 520px"
+        />
         <div class="tabs" role="tablist" aria-label="Region" data-reveal="rise">
           <span class="tabs__glide"></span>
-          <button class="tab on" type="button" onclick="setRegion(this, 'All')">All</button>
-          <button class="tab" type="button" onclick="setRegion(this, 'Cavite')">Cavite</button>
-          <button class="tab" type="button" onclick="setRegion(this, 'Metro Manila')">Metro Manila</button>
+          <button class="tab on" type="button" onclick="setRegion(this, 'All')">
+            All
+          </button>
+          <button class="tab" type="button" onclick="setRegion(this, 'Cavite')">
+            Cavite
+          </button>
+          <button
+            class="tab"
+            type="button"
+            onclick="setRegion(this, 'Metro Manila')"
+          >
+            Metro Manila
+          </button>
         </div>
-        <p class="small muted" id="count" style="margin-bottom: var(--space-3)">Showing 7 of 7 branches</p>
+        <p class="small muted" id="count" style="margin-bottom: var(--space-3)">
+          Showing 7 of 7 branches
+        </p>
         <div class="map-box glass" id="map-box" data-reveal="zoom">
           <div class="map-top">
             <p class="map-title">All 7 branches. Tap a pin for details.</p>
-            <button class="btn btn--secondary btn--sm" type="button" onclick="showAllPins()">Show all branches</button>
+            <button
+              class="btn btn--secondary btn--sm"
+              type="button"
+              onclick="showAllPins()"
+            >
+              Show all branches
+            </button>
           </div>
           <div id="map"></div>
-          <p class="small muted">Tap “Show on map” on any branch card to zoom to that branch.</p>
+          <p class="small muted">
+            Tap “Show on map” on any branch card to zoom to that branch.
+          </p>
         </div>
         <ul class="branch-grid">
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="Capipisa, Tanza – Main Branch" aria-labelledby="b-capipisa">
-          <div class="branch-card__photo"><img src="assets/Branches/capipisa_tanza.jpg" alt="Capipisa, Tanza branch" width="900" height="563" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> The original</span></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-capipisa" class="heading-md">Capipisa, Tanza – Main Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Tanza, Cavite</p>
-              <p class="branch-card__desc">Original and main branch of Café BLK &amp; BRWN.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Daily</dt><dd>8:00 AM – 10:00 PM</dd></div></dl>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Capipisa%2C%20Tanza%20Tanza%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="Naic Branch" aria-labelledby="b-naic">
-          <div class="branch-card__photo"><img src="assets/Branches/naic.jpg" alt="Naic branch" width="900" height="563" loading="lazy" /></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-naic" class="heading-md">Naic Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Naic, Cavite</p>
-              <p class="branch-card__desc">Serves customers within the Naic area.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Mon–Thu</dt><dd>11:00 AM – 11:00 PM</dd></div><div><dt>Fri–Sun</dt><dd>11:00 AM – 12:00 AM</dd></div></dl>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Naic%20Naic%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/profile.php?id=61578167730025" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="General Trias Branch" aria-labelledby="b-general-trias">
-          <div class="branch-card__photo"><img src="assets/Branches/general_trias.jpg" alt="General Trias branch" width="900" height="563" loading="lazy" /></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-general-trias" class="heading-md">General Trias Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> General Trias, Cavite</p>
-              <p class="branch-card__desc">Expands the café’s presence within Cavite.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Mon–Thu</dt><dd>11:00 AM – 11:00 PM</dd></div><div><dt>Fri–Sun</dt><dd>11:00 AM – 12:00 AM</dd></div></dl>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20General%20Trias%20General%20Trias%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/profile.php?id=61564802605947" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="Kawit Branch" aria-labelledby="b-kawit">
-          <div class="branch-card__photo"><img src="assets/Branches/kawit.jpg" alt="Kawit branch" width="900" height="563" loading="lazy" /><span class="badge"><svg class="icon " aria-hidden="true"><use href="#i-star"></use></svg> Event nights</span></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-kawit" class="heading-md">Kawit Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Kawit, Cavite</p>
-              <p class="branch-card__desc">Another accessible location for Cavite customers.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Regular hours</dt><dd>Contact the branch</dd></div><div><dt>Select event nights</dt><dd>Cocktails from 6:00 PM · live DJ from 8:00 PM</dd></div></dl><p class="hours__note muted">Event-night times are not regular opening or closing hours. Please confirm the evening’s schedule with the branch.</p>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Kawit%20Kawit%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/profile.php?id=61578072724691" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="Trece Martires Branch" aria-labelledby="b-trece">
-          <div class="branch-card__photo"><img src="assets/Branches/trece_martires.jpg" alt="Trece Martires branch" width="900" height="563" loading="lazy" /></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-trece" class="heading-md">Trece Martires Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Trece Martires City, Cavite</p>
-              <p class="branch-card__desc">Extends the brand toward the Tanza–Trece Martires area.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Mon–Thu</dt><dd>11:00 AM – 11:00 PM</dd></div><div><dt>Fri–Sun</dt><dd>11:00 AM – 12:00 AM</dd></div></dl>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Trece%20Martires%20Trece%20Martires%20City%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/profile.php?id=61577944301164" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Cavite" data-name="SM City Tanza Branch" aria-labelledby="b-sm-tanza">
-          <div class="branch-card__photo"><img src="assets/Branches/sm_city_tanza.jpg" alt="SM City Tanza branch" width="900" height="563" loading="lazy" /></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-sm-tanza" class="heading-md">SM City Tanza Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> SM City Tanza, Cavite</p>
-              <p class="branch-card__desc">Mall-based location serving customers within the area.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Daily</dt><dd>10:00 AM – 9:00 PM</dd></div></dl>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20SM%20City%20Tanza%20SM%20City%20Tanza%2C%20Cavite" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
-        <li data-reveal="flip"><article class="branch-card glass" data-tilt data-region="Metro Manila" data-name="Festival Mall Alabang Branch" aria-labelledby="b-alabang">
-          <div class="branch-card__photo"><img src="assets/Branches/festival_mall_alabang.jpg" alt="Festival Mall, Alabang branch" width="900" height="563" loading="lazy" /></div>
-          <div class="branch-card__body">
-            <div class="stack">
-              <h2 id="b-alabang" class="heading-md">Festival Mall Alabang Branch</h2>
-              <p class="branch-card__place"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Festival Mall, Alabang, Metro Manila</p>
-              <p class="branch-card__desc">Mall-based location extending the brand into Metro Manila.</p>
-            </div>
-            <div class="hours">
-              <p class="hours__title"><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> Operating hours</p>
-              <dl><div><dt>Daily</dt><dd>Contact the branch</dd></div></dl><p class="hours__note muted">Please check with the branch for current mall hours.</p>
-            </div>
-            <div class="branch-card__actions">
-              <a class="btn btn--primary btn--sm" href="reserve.html"><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Reserve</a>
-              <a class="btn btn--secondary btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Festival%20Mall%2C%20Alabang%20Festival%20Mall%2C%20Alabang%2C%20Metro%20Manila" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-map-pin"></use></svg> Directions</a>
-              <a class="text-link" href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a>
-            </div>
-          </div>
-        </article></li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="Capipisa, Tanza – Main Branch"
+              aria-labelledby="b-capipisa"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/capipisa_tanza.jpg"
+                  alt="Capipisa, Tanza branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                /><span class="badge"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-star"></use>
+                  </svg>
+                  The original</span
+                >
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-capipisa" class="heading-md">
+                    Capipisa, Tanza – Main Branch
+                  </h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Tanza, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Original and main branch of Café BLK &amp; BRWN.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Daily</dt>
+                      <dd>8:00 AM – 10:00 PM</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Capipisa%2C%20Tanza%20Tanza%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/cafeblkandbrwn"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="Naic Branch"
+              aria-labelledby="b-naic"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/naic.jpg"
+                  alt="Naic branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                />
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-naic" class="heading-md">Naic Branch</h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Naic, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Serves customers within the Naic area.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Mon–Thu</dt>
+                      <dd>11:00 AM – 11:00 PM</dd>
+                    </div>
+                    <div>
+                      <dt>Fri–Sun</dt>
+                      <dd>11:00 AM – 12:00 AM</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Naic%20Naic%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/profile.php?id=61578167730025"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="General Trias Branch"
+              aria-labelledby="b-general-trias"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/general_trias.jpg"
+                  alt="General Trias branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                />
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-general-trias" class="heading-md">
+                    General Trias Branch
+                  </h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    General Trias, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Expands the café’s presence within Cavite.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Mon–Thu</dt>
+                      <dd>11:00 AM – 11:00 PM</dd>
+                    </div>
+                    <div>
+                      <dt>Fri–Sun</dt>
+                      <dd>11:00 AM – 12:00 AM</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20General%20Trias%20General%20Trias%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/profile.php?id=61564802605947"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="Kawit Branch"
+              aria-labelledby="b-kawit"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/kawit.jpg"
+                  alt="Kawit branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                /><span class="badge"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-star"></use>
+                  </svg>
+                  Event nights</span
+                >
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-kawit" class="heading-md">Kawit Branch</h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Kawit, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Another accessible location for Cavite customers.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Regular hours</dt>
+                      <dd>Contact the branch</dd>
+                    </div>
+                    <div>
+                      <dt>Select event nights</dt>
+                      <dd>Cocktails from 6:00 PM · live DJ from 8:00 PM</dd>
+                    </div>
+                  </dl>
+                  <p class="hours__note muted">
+                    Event-night times are not regular opening or closing hours.
+                    Please confirm the evening’s schedule with the branch.
+                  </p>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Kawit%20Kawit%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/profile.php?id=61578072724691"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="Trece Martires Branch"
+              aria-labelledby="b-trece"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/trece_martires.jpg"
+                  alt="Trece Martires branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                />
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-trece" class="heading-md">Trece Martires Branch</h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Trece Martires City, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Extends the brand toward the Tanza–Trece Martires area.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Mon–Thu</dt>
+                      <dd>11:00 AM – 11:00 PM</dd>
+                    </div>
+                    <div>
+                      <dt>Fri–Sun</dt>
+                      <dd>11:00 AM – 12:00 AM</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Trece%20Martires%20Trece%20Martires%20City%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/profile.php?id=61577944301164"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Cavite"
+              data-name="SM City Tanza Branch"
+              aria-labelledby="b-sm-tanza"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/sm_city_tanza.jpg"
+                  alt="SM City Tanza branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                />
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-sm-tanza" class="heading-md">
+                    SM City Tanza Branch
+                  </h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    SM City Tanza, Cavite
+                  </p>
+                  <p class="branch-card__desc">
+                    Mall-based location serving customers within the area.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Daily</dt>
+                      <dd>10:00 AM – 9:00 PM</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20SM%20City%20Tanza%20SM%20City%20Tanza%2C%20Cavite"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/cafeblkandbrwn"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal="flip">
+            <article
+              class="branch-card glass"
+              data-tilt
+              data-region="Metro Manila"
+              data-name="Festival Mall Alabang Branch"
+              aria-labelledby="b-alabang"
+            >
+              <div class="branch-card__photo">
+                <img
+                  src="assets/Branches/festival_mall_alabang.jpg"
+                  alt="Festival Mall, Alabang branch"
+                  width="900"
+                  height="563"
+                  loading="lazy"
+                />
+              </div>
+              <div class="branch-card__body">
+                <div class="stack">
+                  <h2 id="b-alabang" class="heading-md">
+                    Festival Mall Alabang Branch
+                  </h2>
+                  <p class="branch-card__place">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Festival Mall, Alabang, Metro Manila
+                  </p>
+                  <p class="branch-card__desc">
+                    Mall-based location extending the brand into Metro Manila.
+                  </p>
+                </div>
+                <div class="hours">
+                  <p class="hours__title">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-clock"></use>
+                    </svg>
+                    Operating hours
+                  </p>
+                  <dl>
+                    <div>
+                      <dt>Daily</dt>
+                      <dd>Contact the branch</dd>
+                    </div>
+                  </dl>
+                  <p class="hours__note muted">
+                    Please check with the branch for current mall hours.
+                  </p>
+                </div>
+                <div class="branch-card__actions">
+                  <a class="btn btn--primary btn--sm" href="reserve.html"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-calendar"></use>
+                    </svg>
+                    Reserve</a
+                  >
+                  <a
+                    class="btn btn--secondary btn--sm"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20BLK%20and%20BRWN%20Festival%20Mall%2C%20Alabang%20Festival%20Mall%2C%20Alabang%2C%20Metro%20Manila"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-map-pin"></use>
+                    </svg>
+                    Directions</a
+                  >
+                  <a
+                    class="text-link"
+                    href="https://web.facebook.com/cafeblkandbrwn"
+                    target="_blank"
+                    rel="noopener"
+                    ><svg class="icon" aria-hidden="true">
+                      <use href="#i-facebook"></use>
+                    </svg>
+                    Facebook</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
         </ul>
-        <p class="notice" id="empty" hidden>No branch matches that search. Try a different name or area.</p>
+        <p class="notice" id="empty" hidden>
+          No branch matches that search. Try a different name or area.
+        </p>
       </section>
 
       <section class="container section--tight" aria-labelledby="note-title">
         <div class="glass card" data-reveal="flip">
-          <h2 id="note-title" class="heading-md">A quick note before your visit</h2>
-          <p>Opening hours may change on holidays and event nights. Contact your branch to confirm your visit.</p>
+          <h2 id="note-title" class="heading-md">
+            A quick note before your visit
+          </h2>
+          <p>
+            Opening hours may change on holidays and event nights. Contact your
+            branch to confirm your visit.
+          </p>
           <div class="cluster">
-            <a class="btn btn--secondary" href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> +63 927 007 3822</a>
+            <a class="btn btn--secondary" href="tel:+639270073822"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-phone"></use>
+              </svg>
+              +63 927 007 3822</a
+            >
             <a class="text-link" href="contact.html">More ways to reach us</a>
           </div>
         </div>
@@ -251,16 +767,56 @@
           <div>
             <h3>Let’s connect</h3>
             <ul>
-              <li><a href="tel:+639270073822"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg> +63 927 007 3822</a></li>
-              <li><a href="mailto:cafeblkandbrwn@gmail.com"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg> cafeblkandbrwn@gmail.com</a></li>
-              <li><a href="https://web.facebook.com/cafeblkandbrwn" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-facebook"></use></svg> Facebook</a></li>
-              <li><a href="https://www.instagram.com/cafeblkandbrwn/" target="_blank" rel="noopener"><svg class="icon " aria-hidden="true"><use href="#i-instagram"></use></svg> Instagram</a></li>
+              <li>
+                <a href="tel:+639270073822"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-phone"></use>
+                  </svg>
+                  +63 927 007 3822</a
+                >
+              </li>
+              <li>
+                <a href="mailto:cafeblkandbrwn@gmail.com"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-mail"></use>
+                  </svg>
+                  cafeblkandbrwn@gmail.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://web.facebook.com/cafeblkandbrwn"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-facebook"></use>
+                  </svg>
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/cafeblkandbrwn/"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-instagram"></use>
+                  </svg>
+                  Instagram</a
+                >
+              </li>
             </ul>
           </div>
         </div>
-        <div class="footer-mark" data-split aria-hidden="true">BLK &amp; BRWN</div>
+        <div class="footer-mark" data-split aria-hidden="true">
+          BLK &amp; BRWN
+        </div>
         <div class="footer-bottom">
-          <p>© <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.</p>
+          <p>
+            © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
+            reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
+            312 Web Development project.
+          </p>
           <ul>
             <li><a href="privacy.html">Privacy</a></li>
             <li><a href="staff.html">Staff access</a></li>
