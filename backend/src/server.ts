@@ -52,7 +52,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 });
 
 connectDatabase()
-  .then(() => app.listen(Number(ENV.PORT), () => console.log(`Server running on port ${ENV.PORT} (${ENV.NODE_ENV})`)))
+  .then(() => app.listen(Number(ENV.PORT), () => console.log(`Server running on http://localhost:${ENV.PORT} (${ENV.NODE_ENV})`)))
   .catch((err) => {
     console.error("Could not start:", err);
     process.exit(1);
