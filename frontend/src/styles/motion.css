@@ -108,6 +108,15 @@ html.is-loading .preloader { display: grid; position: fixed; inset: 0; z-index: 
 .preloader__bar { width: min(240px, 60vw); height: 2px; background: rgba(255, 255, 255, 0.14); border-radius: 2px; overflow: hidden; }
 .preloader__bar i { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(var(--pl, 0)); background: var(--caramel-gradient); }
 @keyframes letter-up { to { opacity: 1; transform: none; } }
+.preloader__msg { min-height: 3.2em; max-width: 34ch; margin: 0; text-align: center; font: 500 0.85rem/1.6 var(--font-body); color: var(--latte); opacity: 0; transition: opacity 0.6s; }
+.preloader__msg.is-on { opacity: 0.85; }
+
+/* waiting for the server (cold start) without the animated intro */
+.server-status { position: fixed; inset: 0; z-index: 420; display: grid; place-content: center; justify-items: center; gap: var(--space-3); padding: var(--space-5); text-align: center; background: #0b0806; color: var(--latte); }
+.server-status__spin { width: 36px; height: 36px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.14); border-top-color: var(--latte); animation: ss-spin 0.9s linear infinite; }
+.server-status__title { margin: 0; font: italic 500 1.5rem/1.2 var(--font-heading); color: var(--white); }
+.server-status__text { margin: 0; max-width: 36ch; font: 500 0.9rem/1.6 var(--font-body); }
+@keyframes ss-spin { to { transform: rotate(360deg); } }
 
 /* 5. LINE-ART COFFEE CUP: draws itself, then steams and fills ------------ */
 .cup { width: 100%; overflow: visible; }
@@ -126,6 +135,8 @@ html.is-loading .preloader .cup .stroke-3 { animation-delay: 0.4s !important; }
 .cup .steam-b { animation-delay: 2.1s !important; }
 .cup .steam-c { animation-delay: 2.7s !important; }
 @keyframes cup-fill { to { transform: translateY(0); } }
+/* in the intro the cup fills with the REAL loading progress (--pl, 0..1) instead of on a timer */
+html.is-loading .preloader .cup .liquid { animation: none; transform: translateY(calc(70px * (1 - var(--pl, 0)))); }
 @keyframes wave { to { transform: translateX(-50px); } }
 @keyframes steam {
   0%   { opacity: 0; transform: translateY(14px) scaleY(0.6); }

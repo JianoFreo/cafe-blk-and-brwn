@@ -37,3 +37,7 @@
 .prose h2 { margin-top: var(--space-7); font-size: var(--step-3); }
 .prose h2:first-child { margin-top: 0; }
 .prose a { color: var(--latte); text-decoration: underline; text-underline-offset: 3px; }
+
+/* the quiet link to the editor, bottom of every page */
+.footer-bottom .footer-admin { opacity: 0.4; transition: opacity 0.2s; }
+.footer-bottom .footer-admin:hover, .footer-bottom .footer-admin:focus-visible { opacity: 1; }
