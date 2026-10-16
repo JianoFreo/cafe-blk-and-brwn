@@ -2,18 +2,18 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { retry } from "../../lib/boot";
 import { setReady } from "../../motion/engine";
 import { useBoot } from "../SiteContext";
-import { Cup } from "./Cup";
-import { Spinner } from "./Spinner";
+import { BrandMark } from "./BrandMark";
 
 const MIN_MS = 2200; // even on a warm server the animation shows long enough to be seen
 
 /**
- * Intro screen: the coffee cup inside a spinning loader, for as long as the site really needs.
+ * Intro screen: the logo inside a spinning loader with the brand name underneath, for as long as the site really needs.
  * It opens only when the server has answered, the content is downloaded and the fonts + hero photo are ready
  * (see lib/boot.js), so a Render cold start simply keeps it spinning.
  * If the server never answers (GIVE_UP_MS in boot.js) it stops and says "Server error".
  */
-export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
+export function Preloader({ assetsReady, heroSrc, onDone }) {
+  // (a `brand` prop may still be passed by SiteLayout; it is not needed any more, BrandMark reads the brand itself)
   const box = useRef(null);
   const [done, setDone] = useState(false);
   const boot = useBoot();
@@ -75,23 +75,12 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
 
   if (done) return null;
   const failed = boot.phase === "failed";
-  const letters = brand.replace(/\s+/g, "").toUpperCase().split("");
   return (
     <div className="preloader" ref={box}>
       <div className="preloader__panel preloader__panel--top" aria-hidden="true" />
       <div className="preloader__panel preloader__panel--bot" aria-hidden="true" />
       <div className={`preloader__inner${failed ? " is-failed" : ""}`}>
-        <Spinner>
-          <Cup k="p" />
-        </Spinner>
-        <p className="preloader__word" aria-hidden="true">
-          {assetsReady &&
-            letters.map((c, i) => (
-              <span key={i} style={{ "--i": i }}>
-                {c}
-              </span>
-            ))}
-        </p>
+        <BrandMark />
         <p className={`preloader__msg${failed ? " is-on" : ""}`} role="status" aria-live="polite">
           {failed ? "Server error" : ""}
         </p>

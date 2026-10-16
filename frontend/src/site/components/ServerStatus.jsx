@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { retry } from "../../lib/boot";
 import { useBoot } from "../SiteContext";
-import { Spinner } from "./Spinner";
+import { BrandMark } from "./BrandMark";
 
 /**
  * Loading screen for visitors who do not get the animated intro
  * (a page other than the home page, a returning visitor, or "reduce motion").
- * The same spinner, shown only if the server is slow, so a fast start never shows it.
+ * The same logo spinner, shown only if the server is slow, so a fast start never shows it.
  */
 export function ServerStatus() {
   const { phase } = useBoot();
@@ -21,7 +21,7 @@ export function ServerStatus() {
   if (!late && !failed) return null;
   return (
     <div className={`server-status${failed ? " is-failed" : ""}`} role="status" aria-live="polite">
-      <Spinner />
+      <BrandMark />
       {failed && (
         <>
           <p className="server-status__title">Server error</p>
