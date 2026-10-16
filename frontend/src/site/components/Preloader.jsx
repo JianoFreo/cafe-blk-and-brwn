@@ -6,26 +6,17 @@ import { Cup } from "./Cup";
 
 const MIN_MS = 1800; // even on a warm server the intro shows long enough to be seen
 
-/** Words under the counter while the backend wakes up (nothing is shown on a fast, warm start). */
-function message(phase, elapsed) {
-  if (phase === "failed") return "We couldn’t reach the server. Please check your connection and try again.";
-  if (phase !== "waking") return "";
-  if (elapsed < 3500) return "";
-  if (elapsed < 25000) return "Waking up the server… it naps when nobody is around, so the first visit can take up to a minute.";
-  return "Still waking up… almost there. Thank you for waiting.";
-}
-
 /**
  * Intro screen: a cup draws and fills while the site loads.
  * The counter and the cup follow the real startup (see lib/boot.js):
  *   server awake  →  content downloaded  →  fonts + hero photo ready  →  100%
- * While the server is still waking up the counter creeps slowly but never passes the step it is waiting for.
+ * While the server is still starting the counter creeps slowly but never passes the step it is waiting for.
+ * If the server never answers (see GIVE_UP_MS in boot.js) the screen says "Server error".
  */
 export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
   const box = useRef(null);
   const counter = useRef(null);
   const [done, setDone] = useState(false);
-  const [text, setText] = useState("");
   const boot = useBoot();
   const bootRef = useRef(boot);
   bootRef.current = boot;
@@ -56,8 +47,7 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
     const t0 = performance.now();
     let raf = 0,
       last = t0,
-      shown = 0,
-      shownText = "";
+      shown = 0;
     const step = (now) => {
       const dt = Math.min(64, now - last) / 16.67; // frames since the last tick
       last = now;
@@ -71,12 +61,6 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
       if (counter.current) counter.current.textContent = String(Math.round(e * 100));
       box.current?.style.setProperty("--pl", e.toFixed(3));
 
-      const t = message(b.phase, Date.now() - b.startedAt);
-      if (t !== shownText) {
-        shownText = t;
-        setText(t);
-      }
-
       if (b.phase === "ready" && assets.current && now - t0 >= MIN_MS && shown > 0.985) {
         finish();
         return;
@@ -89,7 +73,6 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
       if (counter.current) counter.current.textContent = "100";
       box.current?.style.setProperty("--pl", "1");
       box.current?.classList.add("is-done");
-      setText("");
       setTimeout(() => setReady(true), 520);
       setTimeout(() => {
         document.documentElement.classList.remove("is-loading");
@@ -131,8 +114,8 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
         <div className="preloader__bar" aria-hidden="true">
           <i />
         </div>
-        <p className={`preloader__msg${text ? " is-on" : ""}`} role="status" aria-live="polite">
-          {text}
+        <p className={`preloader__msg${boot.phase === "failed" ? " is-on" : ""}`} role="status" aria-live="polite">
+          {boot.phase === "failed" ? "Server error" : ""}
         </p>
         {boot.phase === "failed" && (
           <button type="button" className="btn btn--primary btn--sm" onClick={retry}>

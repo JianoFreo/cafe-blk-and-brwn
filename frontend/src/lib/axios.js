@@ -25,7 +25,7 @@ export function errorMessage(err, fallback = "Something went wrong. Please try a
   if (axios.isAxiosError(err)) {
     const msg = err.response?.data?.error;
     if (msg) return msg;
-    if (!err.response) return "Cannot reach the server. It may still be waking up, so please try again in a moment.";
+    if (!err.response) return "Cannot reach the server. Please try again.";
   }
   return fallback;
 }

@@ -14,7 +14,7 @@ import { API_BASE, api } from "./axios";
  *   "failed"   the server never answered (gives up after GIVE_UP_MS); retry() starts over
  */
 export const TOTAL_REQUESTS = 4;
-const GIVE_UP_MS = 120_000;
+const GIVE_UP_MS = 90_000; // a Render cold start is normally under a minute; past this it is a real server error
 const POLL_EVERY_MS = 1500;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
